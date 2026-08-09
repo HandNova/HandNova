@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HANDNOVA — Mi Cuenta</title>
+  <!-- SEO / metadatos para buscadores y redes sociales -->
+  <meta name="description" content="Crea tu cuenta o inicia sesión en HANDNOVA para guardar tu progreso, tu racha y tus logros aprendiendo Lengua de Señas Colombiana.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="HANDNOVA">
+  <meta property="og:title" content="Mi Cuenta — HANDNOVA">
+  <meta property="og:description" content="Crea tu cuenta o inicia sesión en HANDNOVA para guardar tu progreso, tu racha y tus logros aprendiendo Lengua de Señas Colombiana.">
+  <meta property="og:image" content="../assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mi Cuenta — HANDNOVA">
+  <meta name="twitter:description" content="Crea tu cuenta o inicia sesión en HANDNOVA para guardar tu progreso, tu racha y tus logros aprendiendo Lengua de Señas Colombiana.">
+
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    .cuenta-page {
+      min-height: calc(100vh - 68px);
+      background: var(--azul-fondo);
+      padding: 40px 20px 80px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    /* ── CARD AUTH (login / registro) ─────────────────────── */
+    .auth-card {
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+      width: 100%;
+      max-width: 460px;
+      overflow: hidden;
+    }
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 18px 0;
+      border: none;
+      background: none;
+      font-family: 'Poppins', 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #aaa;
+      cursor: pointer;
+      transition: color 0.2s;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+    }
+    .tab-btn.active { color: var(--morado); border-bottom: 3px solid var(--morado); }
+    .tab-content { padding: 36px 40px 40px; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .tab-panel h2 { font-size: 1.55rem; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+    .tab-panel .subtitulo { font-size: 0.88rem; color: #888; margin-bottom: 28px; }
+    .campo { margin-bottom: 16px; }
+    .campo input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: #333;
+      background: #fafafa;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .campo input::placeholder { color: #bbb; }
+    .campo input:focus { border-color: var(--morado); background: #fff; box-shadow: 0 0 0 3px rgba(124,58,237,0.08); }
+    .forgot-link { display: block; text-align: right; font-size: 0.8rem; color: #888; text-decoration: none; margin-top:-8px; margin-bottom:22px; transition:color 0.2s; }
+    .forgot-link:hover { color: var(--morado); }
+    .btn-cuenta { width:100%; padding:15px; background:var(--morado); color:white; border:none; border-radius:12px; font-size:1rem; font-weight:600; font-family:inherit; cursor:pointer; transition:background 0.2s,transform 0.1s; margin-bottom:20px; }
+    .btn-cuenta:hover { background:#6d28d9; }
+    .btn-cuenta:active { transform:scale(0.98); }
+    .switch-text { text-align:center; font-size:0.87rem; color:#888; }
+    .switch-text a { color:var(--morado); font-weight:600; text-decoration:none; cursor:pointer; }
+    .switch-text a:hover { text-decoration:underline; }
+    .alert { border-radius:10px; padding:12px 16px; font-size:0.87rem; margin-bottom:18px; display:none; }
+    .alert.show { display:block; }
+    .alert-error   { background:#fef2f2; border:1px solid #fecaca; color:#dc2626; }
+    .alert-success { background:#f0fdf4; border:1px solid #bbf7d0; color:#16a34a; }
+    .alert-warning { background:#fffbeb; border:1px solid #fde68a; color:#b45309; }
+
+    .btn-google {
+      width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 13px; background: #fff; color: #3c4043; border: 1.5px solid #dadce0;
+      border-radius: 12px; font-size: 0.95rem; font-weight: 600; font-family: inherit;
+      cursor: pointer; transition: background 0.2s, box-shadow 0.2s; margin-bottom: 18px;
+    }
+    .btn-google:hover  { background: #f8f9fa; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .btn-google:active { transform: scale(0.98); }
+
+    .divisor-o {
+      display: flex; align-items: center; gap: 12px; margin: 4px 0 18px;
+      color: var(--gris-suave); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .divisor-o::before, .divisor-o::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
+
+    .banner-verificar {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      background: #fffbeb; border: 1px solid #fde68a; color: #92400e;
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 20px; font-size: 0.9rem;
+    }
+    .banner-verificar button {
+      background: #b45309; color: #fff; border: none; border-radius: 8px;
+      padding: 7px 14px; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: inherit;
+    }
+    .banner-verificar button:hover { background: #92400e; }
+    .hint { font-size:0.76rem; color:#bbb; margin-top:4px; padding-left:4px; }
+
+    /* ── PANEL DE SESIÓN ACTIVA ────────────────────────────── */
+    .perfil-wrap {
+      width: 100%;
+      max-width: 860px;
+      display: none;
+    }
+
+    /* Header del perfil */
+    .perfil-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d1b5e 60%, #0a2040 100%);
+      border-radius: 24px;
+      padding: 40px 36px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .perfil-header::before {
+      content: '🤟';
+      position: absolute;
+      font-size: 10rem;
+      opacity: 0.05;
+      right: -20px; bottom: -20px;
+      pointer-events: none;
+    }
+    .perfil-avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--morado), var(--cyan));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      color: white;
+      font-weight: 900;
+      flex-shrink: 0;
+      font-family: 'Outfit', sans-serif;
+      border: 3px solid rgba(255,255,255,0.2);
+    }
+    .perfil-info { flex: 1; }
+    .perfil-nombre { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; color: white; margin-bottom: 4px; }
+    .perfil-correo { font-size: 0.88rem; color: rgba(255,255,255,0.55); }
+    .perfil-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      padding: 5px 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* Grid de tarjetas */
+    .perfil-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .perfil-stat-card {
+      background: white;
+      border-radius: 18px;
+      padding: 22px 20px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      border: 1.5px solid #f0f0f0;
+      text-align: center;
+    }
+    .perfil-stat-icon { font-size: 1.8rem; margin-bottom: 8px; display: block; }
+    .perfil-stat-num {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 1.7rem;
+      background: linear-gradient(135deg, var(--morado), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .perfil-stat-label { font-size: 0.78rem; color: var(--gris-suave); }
+
+    /* Sección de actividad reciente */
+    .perfil-section {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      border: 1.5px solid #f0f0f0;
+      margin-bottom: 16px;
+    }
+    .perfil-section-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--negro);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .actividad-list { display: flex; flex-direction: column; gap: 12px; }
+    .actividad-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 14px;
+      background: var(--azul-fondo);
+      border-radius: 12px;
+      font-size: 0.88rem;
+    }
+    .actividad-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .actividad-texto { flex: 1; color: var(--gris-texto); line-height: 1.4; }
+    .actividad-tiempo { font-size: 0.78rem; color: var(--gris-suave); flex-shrink: 0; }
+
+    /* Categorías favoritas */
+    .favoritos-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .favorito-chip {
+      background: rgba(124,58,237,0.07);
+      border: 1.5px solid rgba(124,58,237,0.15);
+      color: var(--morado);
+      border-radius: 50px;
+      padding: 7px 16px;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    /* Ajustes de cuenta */
+    .ajustes-list { display: flex; flex-direction: column; gap: 4px; }
+    .ajuste-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 6px;
+      border-bottom: 1px solid #f5f5f5;
+      font-size: 0.9rem;
+      color: var(--gris-texto);
+    }
+    .ajuste-row:last-child { border-bottom: none; }
+    .ajuste-label { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+    .toggle-switch {
+      width: 42px; height: 24px;
+      background: #e5e7eb;
+      border-radius: 50px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: none;
+      flex-shrink: 0;
+    }
+    .toggle-switch.on { background: var(--morado); }
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      width: 18px; height: 18px;
+      background: white;
+      border-radius: 50%;
+      top: 3px; left: 3px;
+      transition: left 0.2s;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    .toggle-switch.on::after { left: 21px; }
+
+    /* Botones acción */
+    .perfil-acciones {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-accion {
+      flex: 1;
+      min-width: 140px;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, transform 0.1s;
+      text-decoration: none;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+    }
+    .btn-accion:active { transform: scale(0.98); }
+    .btn-accion.primario { background: var(--morado); color: white; }
+    .btn-accion.primario:hover { background: #6d28d9; }
+    .btn-accion.secundario { background: #f3f4f6; color: var(--gris-texto); }
+    .btn-accion.secundario:hover { background: #e5e7eb; }
+    .btn-accion.peligro { background: #fee2e2; color: #dc2626; }
+    .btn-accion.peligro:hover { background: #fecaca; }
+
+    @media (max-width: 680px) {
+      .perfil-grid { grid-template-columns: repeat(2, 1fr); }
+      .perfil-header { flex-direction: column; text-align: center; padding: 32px 24px; }
+    }
+    @media (max-width: 420px) {
+      .perfil-grid { grid-template-columns: 1fr; }
+      .tab-content { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="logo">
+      <span class="logo-s">H</span><span class="logo-ig">AND</span><span class="logo-no">NO</span><span class="logo-va">VA</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html" aria-label="Inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Inicio</span></a></li>
+      <li><a href="../lecciones/categorias.html" aria-label="Categorías"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Categorías</span></a></li>
+      <li><a href="../lecciones/abecedario.html" aria-label="Abecedario"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg><span>Abecedario</span></a></li>
+      <li><a href="../practica/buscar.html" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Buscar</span></a></li>
+      <li><a href="cuenta.html" class="active" aria-label="Cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="nav-cuenta-label">Cuenta</span></a></li>
+      <li class="dropdown">
+        <a href="#" title="Más opciones" aria-label="Más opciones">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <span>Más</span>
+        </a>
+        <ul class="dropdown-menu">
+        <li><a href="../practica/juegos.html">🎮 Juego</a></li>
+          <li><a href="../practica/quiz.html">🧠 Quiz</a></li>
+          <li><a href="progreso.html">📊 Progreso</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="navbar-line"></div>
+
+  <section class="cuenta-page">
+
+    <!-- ── PANEL SESIÓN ACTIVA ──────────────────────────────── -->
+    <!-- ── PENDIENTE DE VERIFICACIÓN (cuentas correo/contraseña sin confirmar) ── -->
+    <div class="auth-card" id="pendiente-verificacion" style="display:none; text-align:center;">
+      <div style="font-size:2.5rem; margin-bottom:12px;">✉️</div>
+      <h2 style="margin-bottom:10px;">Verifica tu correo</h2>
+      <p style="color:var(--gris-texto); margin-bottom:20px; line-height:1.5;">
+        Te enviamos un enlace de confirmación a <strong id="correo-pendiente"></strong>.
+        Ábrelo para activar tu cuenta — mientras tanto no puedes ver tu perfil ni tu progreso.
+      </p>
+      <button class="btn-google" onclick="reenviarVerificacion()" id="btn-reenviar-verificacion" style="border-color:var(--morado); color:var(--morado);">Reenviar correo</button>
+      <button class="btn-google" onclick="cerrarSesion()" style="margin-top:0;">Cerrar sesión</button>
+    </div>
+
+    <div class="perfil-wrap" id="perfil-wrap">
+
+      <!-- Header con avatar y nombre -->
+      <div class="perfil-header">
+        <div class="perfil-avatar" id="perfil-avatar">U</div>
+        <div class="perfil-info">
+          <div class="perfil-nombre" id="perfil-nombre">Usuario</div>
+          <div class="perfil-correo" id="perfil-correo">correo@ejemplo.com</div>
+          <div class="perfil-badge">Estudiante LSC</div>
+        </div>
+      </div>
+
+      <!-- Estadísticas rápidas -->
+      <div class="perfil-grid">
+        <div class="perfil-stat-card">
+          <span class="perfil-stat-icon"></span>
+          <div class="perfil-stat-num" id="stat-racha">0</div>
+          <div class="perfil-stat-label">Racha de días</div>
+        </div>
+        <div class="perfil-stat-card">
+          <span class="perfil-stat-icon"></span>
+          <div class="perfil-stat-num" id="stat-quiz">0</div>
+          <div class="perfil-stat-label">Mejor puntaje quiz</div>
+        </div>
+        <div class="perfil-stat-card">
+          <span class="perfil-stat-icon"></span>
+          <div class="perfil-stat-num" id="stat-juego">0</div>
+          <div class="perfil-stat-label">Partidas jugadas</div>
+        </div>
+        <div class="perfil-stat-card">
+          <span class="perfil-stat-icon"></span>
+          <div class="perfil-stat-num" id="stat-dias">1</div>
+          <div class="perfil-stat-label">Días en HANDNOVA</div>
+        </div>
+      </div>
+
+      <!-- Actividad reciente -->
+      <div class="perfil-section">
+        <div class="perfil-section-title">📋 Actividad reciente</div>
+        <div class="actividad-list" id="actividad-lista">
+          <!-- Se llena dinámicamente desde gamification.js (HANDNOVA.renderTodo) -->
+        </div>
+      </div>
+
+      <!-- Ajustes -->
+      <div style="margin-bottom:16px;">
+
+        <div class="perfil-section" style="margin-bottom:0">
+          <div class="perfil-section-title">⚙️ Ajustes rápidos</div>
+          <div class="ajustes-list">
+            <div class="ajuste-row">
+              <span class="ajuste-label">🌙 Modo oscuro</span>
+              <button class="toggle-switch" id="toggle-modo-oscuro" onclick="alternarOscuro()" title="Modo oscuro"></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="perfil-section">
+        <div class="perfil-acciones">
+          <button class="btn-accion peligro" onclick="cerrarSesion()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Cerrar sesión
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /perfil-wrap -->
+
+    <!-- ── CARD AUTH ─────────────────────────────────────────── -->
+    <div class="auth-card" id="auth-card">
+      <div class="alert alert-error" id="google-error"></div>
+      <button class="btn-google" onclick="continuarConGoogle()">
+        <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l6-6C34.5 5.1 29.5 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21c0-1.4-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.1 18.9 12 24 12c3.1 0 5.8 1.1 8 3l6-6C34.5 5.1 29.5 3 24 3 16.3 3 9.7 7.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 45c5.4 0 10.3-1.8 14-4.9l-6.5-5.5c-2 1.5-4.6 2.4-7.5 2.4-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.6 40.5 16.2 45 24 45z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.2 4.2-4.1 5.6l6.5 5.5C41.5 36 45 30.5 45 24c0-1.4-.1-2.7-.4-3.5z"/></svg>
+        Continuar con Google
+      </button>
+      <div class="divisor-o">o con tu correo</div>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('login')">Iniciar sesión</button>
+        <button class="tab-btn"        onclick="switchTab('registro')">Crear cuenta</button>
+      </div>
+      <div class="tab-content">
+
+        <!-- LOGIN -->
+        <div class="tab-panel active" id="panel-login">
+          <h2>Bienvenido</h2>
+          <p class="subtitulo">Inicia sesión para continuar en HANDNOVA.</p>
+          <div class="alert alert-error" id="login-error"></div>
+          <div class="campo"><input type="email"    id="login-correo" placeholder="Correo electrónico" autocomplete="email"></div>
+          <div class="campo"><input type="password" id="login-pass"   placeholder="Contraseña" autocomplete="current-password"></div>
+          <a class="forgot-link" onclick="switchTab('recuperar')" href="#">¿Olvidaste tu contraseña?</a>
+          <button class="btn-cuenta" onclick="iniciarSesion()">Ingresar</button>
+          <p class="switch-text">¿No tienes cuenta? <a onclick="switchTab('registro')">Regístrate</a></p>
+        </div>
+
+        <!-- REGISTRO -->
+        <div class="tab-panel" id="panel-registro">
+          <h2>Crear cuenta</h2>
+          <p class="subtitulo">Únete a HANDNOVA y empieza a aprender LSC hoy.</p>
+          <div class="alert alert-error"   id="registro-error"></div>
+          <div class="alert alert-success" id="registro-exito"></div>
+          <div class="campo"><input type="text"     id="reg-nombre"    placeholder="Nombre completo" autocomplete="name"></div>
+          <div class="campo"><input type="email"    id="reg-correo"    placeholder="Correo electrónico" autocomplete="email"></div>
+          <div class="campo">
+            <input type="password" id="reg-pass" placeholder="Contraseña" autocomplete="new-password">
+            <p class="hint">Mínimo 6 caracteres</p>
+          </div>
+          <div class="campo"><input type="password" id="reg-confirmar" placeholder="Confirmar contraseña" autocomplete="new-password"></div>
+          <button class="btn-cuenta" onclick="registrar()" style="margin-top:8px">Crear cuenta</button>
+          <p class="switch-text">¿Ya tienes cuenta? <a onclick="switchTab('login')">Inicia sesión</a></p>
+        </div>
+
+        <!-- RECUPERAR -->
+        <div class="tab-panel" id="panel-recuperar">
+          <h2>Recuperar contraseña</h2>
+          <p class="subtitulo">Ingresa tu correo y te mostraremos tu contraseña.</p>
+          <div class="alert alert-error"   id="rec-error"></div>
+          <div class="alert alert-success" id="rec-exito"></div>
+          <div class="campo"><input type="email" id="rec-correo" placeholder="Correo electrónico"></div>
+          <button class="btn-cuenta" onclick="recuperar()">Buscar cuenta</button>
+          <p class="switch-text"><a onclick="switchTab('login')">← Volver a iniciar sesión</a></p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <script type="module">
+    import {
+      auth,
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      signOut,
+      updateProfile,
+      onAuthStateChanged,
+      sendPasswordResetEmail,
+      sendEmailVerification,
+      GoogleAuthProvider,
+      signInWithPopup
+    } from '../assets/firebase/firebase.js';
+
+    // Traduce los códigos de error de Firebase a mensajes en español
+    function mensajeError(codigo) {
+      const mapa = {
+        'auth/email-already-in-use': 'Ese correo ya está registrado.',
+        'auth/invalid-email':        'El correo no es válido.',
+        'auth/weak-password':        'La contraseña es demasiado débil.',
+        'auth/user-not-found':       'Correo o contraseña incorrectos.',
+        'auth/wrong-password':       'Correo o contraseña incorrectos.',
+        'auth/invalid-credential':   'Correo o contraseña incorrectos.',
+        'auth/too-many-requests':    'Demasiados intentos. Intenta más tarde.',
+      };
+      return mapa[codigo] || 'Ocurrió un error. Intenta de nuevo.';
+    }
+
+    /* ---- Validación de correo real ------------------------------------
+       Dos capas:
+       1. Lista de proveedores de correo reales conocidos (Gmail, Outlook,
+          Yahoo, iCloud, etc.) — si el dominio no está aquí, se rechaza.
+       2. Por si en el futuro quieres abrirlo a más dominios (por ejemplo
+          correos institucionales @sena.edu.co), basta con agregarlos aquí,
+          o cambiar a un enfoque de "lista negra" de correos temporales.
+       La verificación REAL de que el correo existe y le pertenece a la
+       persona la hace sendEmailVerification() más abajo, que manda un
+       enlace de confirmación al correo. Eso es lo que de verdad prueba
+       que el correo es legítimo, no solo el nombre del dominio. -------- */
+    const PROVEEDORES_PERMITIDOS = [
+      'gmail.com', 'googlemail.com',
+      'outlook.com', 'outlook.es', 'hotmail.com', 'hotmail.es', 'live.com', 'msn.com',
+      'yahoo.com', 'yahoo.es',
+      'icloud.com', 'me.com', 'mac.com',
+      'protonmail.com', 'proton.me',
+      'gmx.com', 'zoho.com', 'aol.com',
+    ];
+
+    function correoEsDeProveedorReal(correo) {
+      const dominio = correo.split('@')[1]?.toLowerCase().trim();
+      return !!dominio && PROVEEDORES_PERMITIDOS.includes(dominio);
+    }
+
+    function mostrarPantalla(id) {
+      ['auth-card', 'pendiente-verificacion', 'perfil-wrap'].forEach(otro => {
+        document.getElementById(otro).style.display = (otro === id) ? 'block' : 'none';
+      });
+    }
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const esCuentaGoogle = user.providerData.some(p => p.providerId === 'google.com');
+        if (!esCuentaGoogle && !user.emailVerified) {
+          // Correo/contraseña sin confirmar: NO se muestra el perfil ni el progreso.
+          document.getElementById('correo-pendiente').textContent = user.email;
+          mostrarPantalla('pendiente-verificacion');
+          return;
+        }
+        mostrarPantalla('perfil-wrap');
+        mostrarPerfil({ nombre: user.displayName || 'Usuario', correo: user.email });
+        actualizarNavLabel(user.displayName);
+      } else {
+        mostrarPantalla('auth-card');
+        const label = document.getElementById('nav-cuenta-label');
+        if (label) label.textContent = 'Cuenta';
+      }
+      const toggleOscuro = document.getElementById('toggle-modo-oscuro');
+      if (toggleOscuro && window.HANDNOVA) {
+        toggleOscuro.classList.toggle('on', window.HANDNOVA.modoOscuroActivo());
+      }
+    });
+
+    function alternarOscuro() {
+      const activo = window.HANDNOVA.alternarModoOscuro();
+      document.getElementById('toggle-modo-oscuro').classList.toggle('on', activo);
+    }
+
+    function mostrarPerfil(sesion) {
+      document.getElementById('perfil-nombre').textContent = sesion.nombre;
+      document.getElementById('perfil-correo').textContent = sesion.correo;
+      document.getElementById('perfil-avatar').textContent = sesion.nombre.charAt(0).toUpperCase();
+      // Las estadísticas (racha, quiz, partidas, días, actividad reciente)
+      // las pinta gamification.js de forma centralizada vía HANDNOVA.renderTodo(),
+      // tanto al cargar la página como cuando cloud-sync.js confirma la sesión.
+      if (window.HANDNOVA) HANDNOVA.renderTodo();
+    }
+
+    function actualizarNavLabel(nombreCompleto) {
+      const label = document.getElementById('nav-cuenta-label');
+      if (nombreCompleto && label) label.textContent = nombreCompleto.split(' ')[0];
+    }
+
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      if (tab === 'recuperar') { document.getElementById('panel-recuperar').classList.add('active'); return; }
+      document.getElementById('panel-' + tab).classList.add('active');
+      document.querySelectorAll('.tab-btn')[tab === 'login' ? 0 : 1].classList.add('active');
+      limpiarAlertas();
+    }
+
+    function limpiarAlertas() {
+      document.querySelectorAll('.alert').forEach(a => { a.classList.remove('show'); a.textContent = ''; });
+    }
+    function showError(id, msg)   { const el=document.getElementById(id); el.textContent=msg; el.className='alert alert-error show'; }
+    function showSuccess(id, msg) { const el=document.getElementById(id); el.textContent=msg; el.className='alert alert-success show'; }
+
+    async function iniciarSesion() {
+      limpiarAlertas();
+      const correo = document.getElementById('login-correo').value.trim();
+      const pass   = document.getElementById('login-pass').value;
+      if (!correo || !pass) { showError('login-error', 'Completa todos los campos.'); return; }
+      try {
+        await signInWithEmailAndPassword(auth, correo, pass);
+        // onAuthStateChanged se encarga de mostrar el perfil
+      } catch (e) {
+        showError('login-error', mensajeError(e.code));
+      }
+    }
+
+    async function registrar() {
+      limpiarAlertas();
+      const nombre    = document.getElementById('reg-nombre').value.trim();
+      const correo    = document.getElementById('reg-correo').value.trim();
+      const pass      = document.getElementById('reg-pass').value;
+      const confirmar = document.getElementById('reg-confirmar').value;
+      if (!nombre || !correo || !pass || !confirmar) { showError('registro-error', 'Completa todos los campos.'); return; }
+      if (!/\S+@\S+\.\S+/.test(correo))              { showError('registro-error', 'El correo no es válido.'); return; }
+      if (!correoEsDeProveedorReal(correo)) {
+        showError('registro-error', 'Usa un correo real de Gmail, Outlook, Yahoo, iCloud u otro proveedor conocido.');
+        return;
+      }
+      if (pass.length < 6)                            { showError('registro-error', 'Mínimo 6 caracteres en la contraseña.'); return; }
+      if (pass !== confirmar)                         { showError('registro-error', 'Las contraseñas no coinciden.'); return; }
+      try {
+        const cred = await createUserWithEmailAndPassword(auth, correo, pass);
+        await updateProfile(cred.user, { displayName: nombre });
+        try { await sendEmailVerification(cred.user); } catch (e) { /* no bloquea el registro si falla el envío */ }
+        // onAuthStateChanged confirmará el estado real (sin verificar) y
+        // mostrará la pantalla de "pendiente de verificación" correspondiente.
+        document.getElementById('correo-pendiente').textContent = correo;
+        mostrarPantalla('pendiente-verificacion');
+      } catch (e) {
+        showError('registro-error', mensajeError(e.code));
+      }
+    }
+
+    async function continuarConGoogle() {
+      document.getElementById('google-error').classList.remove('show');
+      try {
+        await signInWithPopup(auth, new GoogleAuthProvider());
+        // onAuthStateChanged se encarga del resto (mostrar perfil, sincronizar, etc.)
+      } catch (e) {
+        if (e.code === 'auth/popup-closed-by-user') return; // el usuario cerró la ventana, no es un error real
+        showError('google-error', 'No se pudo continuar con Google. Intenta de nuevo.');
+      }
+    }
+
+    async function reenviarVerificacion() {
+      const btn = document.getElementById('btn-reenviar-verificacion');
+      try {
+        await sendEmailVerification(auth.currentUser);
+        btn.textContent = 'Enviado ✓';
+        setTimeout(() => { btn.textContent = 'Reenviar correo'; }, 4000);
+      } catch (e) {
+        btn.textContent = 'Espera un momento...';
+        setTimeout(() => { btn.textContent = 'Reenviar correo'; }, 4000);
+      }
+    }
+
+    async function recuperar() {
+      limpiarAlertas();
+      const correo = document.getElementById('rec-correo').value.trim();
+      if (!correo) { showError('rec-error', 'Ingresa tu correo.'); return; }
+      try {
+        await sendPasswordResetEmail(auth, correo);
+        showSuccess('rec-exito', 'Si el correo existe, te enviamos un enlace para restablecer tu contraseña.');
+      } catch (e) {
+        showError('rec-error', mensajeError(e.code));
+      }
+    }
+
+    async function cerrarSesion() {
+      await signOut(auth);
+      limpiarAlertas();
+      switchTab('login');
+    }
+
+    // Los atributos onclick del HTML necesitan estas funciones en window,
+    // ya que este script es un módulo (sus funciones no son globales por defecto).
+    Object.assign(window, {
+      alternarOscuro, switchTab, iniciarSesion, registrar, recuperar, cerrarSesion,
+      continuarConGoogle, reenviarVerificacion
+    });
+  </script>
+<script type="module" src="../assets/js/cloud-sync.js"></script>
+<script src="../assets/js/gamification.js"></script>
+<script src="../assets/js/chatbot.js"></script>
+<script src="../assets/js/video-controls.js"></script>
+<script src="../assets/js/mobile-nav.js"></script>
+
+<footer>
+  <strong>HANDNOVA</strong> — Plataforma de aprendizaje de Lengua de Señas Colombiana &nbsp;·&nbsp; Proyecto Formativo SENA
+  <div class="footer-legal"><a href="../legal/terminos.html">Términos y Condiciones</a> &nbsp;·&nbsp; <a href="../legal/privacidad.html">Tratamiento de Datos</a></div>
+</footer>
+</body>
+</html>

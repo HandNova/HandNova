@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juego — HANDNOVA</title>
+  <!-- SEO / metadatos para buscadores y redes sociales -->
+  <meta name="description" content="Repasa tu Lengua de Señas Colombiana jugando: Busca Parejas, Deletreo y Contrarreloj.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="HANDNOVA">
+  <meta property="og:title" content="Juegos — HANDNOVA">
+  <meta property="og:description" content="Repasa tu Lengua de Señas Colombiana jugando: Busca Parejas, Deletreo y Contrarreloj.">
+  <meta property="og:image" content="../assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Juegos — HANDNOVA">
+  <meta name="twitter:description" content="Repasa tu Lengua de Señas Colombiana jugando: Busca Parejas, Deletreo y Contrarreloj.">
+
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .juegos-page {
+    min-height: calc(100vh - 74px);
+    background: var(--azul-fondo);
+    padding: 48px 5% 80px;
+  }
+  .juegos-header { text-align: center; margin-bottom: 40px; }
+  .juegos-header h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    letter-spacing: -1.5px;
+    color: var(--negro);
+    margin-bottom: 10px;
+  }
+  .juegos-header h1 span {
+    background: linear-gradient(135deg, var(--morado), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .juegos-header p {
+    color: var(--gris-suave);
+    font-size: 1rem;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .grid-juegos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  @media (max-width: 880px) {
+    .grid-juegos { grid-template-columns: 1fr; max-width: 480px; }
+  }
+
+  .juego-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.09);
+    border: 1.5px solid #f0f0f0;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .juego-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.14);
+  }
+  .juego-card-top {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2rem;
+  }
+  .juego-card-top.memoria    { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+  .juego-card-top.deletreo   { background: linear-gradient(135deg, #06b6d4, #22d3ee); }
+  .juego-card-top.contrarreloj { background: linear-gradient(135deg, #f97316, #f43f5e); }
+
+  .juego-card-body { padding: 20px 22px 24px; }
+  .juego-card-body h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--negro);
+    margin-bottom: 8px;
+  }
+  .juego-card-body p {
+    color: var(--gris-suave);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  .juego-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--morado);
+  }
+</style>
+</head>
+
+<body>
+<nav class="navbar">
+  <a href="../index.html" class="logo"><span class="logo-s">H</span><span class="logo-ig">AND</span><span class="logo-no">NO</span><span class="logo-va">VA</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html" aria-label="Inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Inicio</span></a></li>
+    <li><a href="../lecciones/categorias.html" aria-label="Categorías"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Categorías</span></a></li>
+      <li><a href="../lecciones/abecedario.html" aria-label="Abecedario"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg><span>Abecedario</span></a></li>
+      <li><a href="buscar.html" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Buscar</span></a></li>
+      <li><a href="../usuario/cuenta.html" id="nav-cuenta-link" aria-label="Cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="nav-cuenta-label">Cuenta</span></a></li>
+    <li class="dropdown">
+      <a href="#" title="Más opciones" aria-label="Más opciones"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg><span>Más</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="juegos.html">🎮 Juego</a></li>
+        <li><a href="quiz.html">🧠 Quiz</a></li>
+        <li><a href="../usuario/progreso.html">📊 Progreso</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<div style="height:3px;background:linear-gradient(90deg,var(--magenta),#a855f7,var(--cyan))"></div>
+
+<section class="juegos-page">
+
+  <div class="juegos-header">
+    <h1>Elige un <span>juego</span></h1>
+    <p>Aprende y repasa la Lengua de Señas Colombiana jugando. Elige uno de los 3 juegos disponibles.</p>
+  </div>
+
+  <div class="grid-juegos">
+
+    <a href="juego.html" class="juego-card">
+      <div class="juego-card-top memoria">🎮</div>
+      <div class="juego-card-body">
+        <h2>Juego de memoria</h2>
+        <p>Encuentra las parejas entre la palabra y su video en LSC. Elige la categoría que quieras practicar.</p>
+        <div class="juego-card-cta">Jugar →</div>
+      </div>
+    </a>
+
+    <a href="deletreo.html" class="juego-card">
+      <div class="juego-card-top deletreo">📝</div>
+      <div class="juego-card-body">
+        <h2>Deletreo LSC</h2>
+        <p>Mira la seña y deletrea la palabra correcta usando el teclado A-Z.</p>
+        <div class="juego-card-cta">Jugar →</div>
+      </div>
+    </a>
+
+    <a href="contrarreloj.html" class="juego-card">
+      <div class="juego-card-top contrarreloj">⏱️</div>
+      <div class="juego-card-body">
+        <h2>Contrarreloj</h2>
+        <p>Responde la mayor cantidad de señas posible antes de que se acabe el tiempo. ¡Suma combo!</p>
+        <div class="juego-card-cta">Jugar →</div>
+      </div>
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  <strong>HANDNOVA</strong> — Plataforma de aprendizaje de Lengua de Señas Colombiana &nbsp;·&nbsp;
+  Proyecto Formativo SENA
+
+    <div class="footer-legal"><a href="../legal/terminos.html">Términos y Condiciones</a> &nbsp;·&nbsp; <a href="../legal/privacidad.html">Tratamiento de Datos</a></div>
+  </footer>
+
+<script>
+  (function() {
+    const sesion = JSON.parse(localStorage.getItem('HANDNOVA_sesion') || 'null');
+    const label = document.getElementById('nav-cuenta-label');
+    if (sesion && label) label.textContent = sesion.nombre.split(' ')[0];
+  })();
+</script>
+
+<script type="module" src="../assets/js/cloud-sync.js"></script>
+
+<script src="../assets/js/gamification.js"></script>
+<script src="../assets/js/chatbot.js"></script>
+<script src="../assets/js/video-controls.js"></script>
+<script src="../assets/js/mobile-nav.js"></script>
+</body>
+</html>
