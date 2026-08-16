@@ -2,276 +2,1897 @@
   "perro": {
     "label": "Perro",
     "categoria": "🐾 Animales",
-    "pagina": "animales.html"
+    "pagina": "animales.html",
+    "disponible": true
   },
   "gato": {
     "label": "Gato",
     "categoria": "🐾 Animales",
-    "pagina": "animales.html"
+    "pagina": "animales.html",
+    "disponible": true
   },
   "loro": {
     "label": "Loro",
     "categoria": "🐾 Animales",
-    "pagina": "animales.html"
+    "pagina": "animales.html",
+    "disponible": true
   },
   "vaca": {
     "label": "Vaca",
     "categoria": "🐾 Animales",
-    "pagina": "animales.html"
+    "pagina": "animales.html",
+    "disponible": true
   },
   "caballo": {
     "label": "Caballo",
     "categoria": "🐾 Animales",
-    "pagina": "animales.html"
+    "pagina": "animales.html",
+    "disponible": true
   },
   "tiburon": {
     "label": "Tiburón",
     "categoria": "🐾 Animales",
-    "pagina": "animales.html"
+    "pagina": "animales.html",
+    "disponible": true
   },
   "rojo": {
     "label": "Rojo",
     "categoria": "🎨 Colores",
-    "pagina": "colores.html"
+    "pagina": "colores.html",
+    "disponible": true
   },
   "azul": {
     "label": "Azul",
     "categoria": "🎨 Colores",
-    "pagina": "colores.html"
+    "pagina": "colores.html",
+    "disponible": true
   },
   "amarillo": {
     "label": "Amarillo",
     "categoria": "🎨 Colores",
-    "pagina": "colores.html"
+    "pagina": "colores.html",
+    "disponible": true
   },
   "negro": {
     "label": "Negro",
     "categoria": "🎨 Colores",
-    "pagina": "colores.html"
+    "pagina": "colores.html",
+    "disponible": true
   },
   "blanco": {
     "label": "Blanco",
     "categoria": "🎨 Colores",
-    "pagina": "colores.html"
+    "pagina": "colores.html",
+    "disponible": true
   },
   "almuerzo": {
     "label": "Almuerzo",
     "categoria": "🍽️ Comida",
-    "pagina": "comida.html"
+    "pagina": "comida.html",
+    "disponible": true
   },
   "caliente": {
     "label": "Caliente",
     "categoria": "🍽️ Comida",
-    "pagina": "comida.html"
+    "pagina": "comida.html",
+    "disponible": true
   },
   "cena": {
     "label": "Cena",
     "categoria": "🍽️ Comida",
-    "pagina": "comida.html"
+    "pagina": "comida.html",
+    "disponible": true
   },
   "desayunar": {
     "label": "Desayunar",
     "categoria": "🍽️ Comida",
-    "pagina": "comida.html"
+    "pagina": "comida.html",
+    "disponible": true
   },
   "hambre": {
     "label": "Hambre",
     "categoria": "🍽️ Comida",
-    "pagina": "comida.html"
+    "pagina": "comida.html",
+    "disponible": true
   },
   "cabeza": {
     "label": "Cabeza",
     "categoria": "💪 Cuerpo humano",
-    "pagina": "cuerpo.html"
+    "pagina": "cuerpo.html",
+    "disponible": true
   },
   "brazos": {
     "label": "Brazos",
     "categoria": "💪 Cuerpo humano",
-    "pagina": "cuerpo.html"
+    "pagina": "cuerpo.html",
+    "disponible": true
   },
   "pies": {
     "label": "Pies",
     "categoria": "💪 Cuerpo humano",
-    "pagina": "cuerpo.html"
+    "pagina": "cuerpo.html",
+    "disponible": true
   },
   "manos": {
     "label": "Manos",
     "categoria": "💪 Cuerpo humano",
-    "pagina": "cuerpo.html"
+    "pagina": "cuerpo.html",
+    "disponible": true
   },
   "boca": {
     "label": "Boca",
     "categoria": "💪 Cuerpo humano",
-    "pagina": "cuerpo.html"
+    "pagina": "cuerpo.html",
+    "disponible": true
   },
   "ojo": {
     "label": "Ojo",
     "categoria": "💪 Cuerpo humano",
-    "pagina": "cuerpo.html"
+    "pagina": "cuerpo.html",
+    "disponible": true
   },
   "amor": {
     "label": "Amor",
     "categoria": "Emociones",
-    "pagina": "emociones.html"
+    "pagina": "emociones.html",
+    "disponible": true
   },
   "feliz": {
     "label": "Feliz",
     "categoria": "Emociones",
-    "pagina": "emociones.html"
+    "pagina": "emociones.html",
+    "disponible": true
   },
   "desagrado": {
     "label": "Desagrado",
     "categoria": "Emociones",
-    "pagina": "emociones.html"
+    "pagina": "emociones.html",
+    "disponible": true
   },
   "ira": {
     "label": "Ira",
     "categoria": "Emociones",
-    "pagina": "emociones.html"
+    "pagina": "emociones.html",
+    "disponible": true
   },
   "sorpresa": {
     "label": "Sorpresa",
     "categoria": "Emociones",
-    "pagina": "emociones.html"
+    "pagina": "emociones.html",
+    "disponible": true
   },
   "triste": {
     "label": "Triste",
     "categoria": "Emociones",
-    "pagina": "emociones.html"
+    "pagina": "emociones.html",
+    "disponible": true
   },
   "cuaderno": {
     "label": "Cuaderno",
     "categoria": "📚 Escuela",
-    "pagina": "escuela.html"
+    "pagina": "escuela.html",
+    "disponible": true
   },
   "colegio": {
     "label": "Colegio",
     "categoria": "📚 Escuela",
-    "pagina": "escuela.html"
+    "pagina": "escuela.html",
+    "disponible": true
   },
   "colores_escuela": {
     "label": "Colores",
     "categoria": "📚 Escuela",
-    "pagina": "escuela.html"
+    "pagina": "escuela.html",
+    "disponible": true
   },
   "esfero": {
     "label": "Esfero",
     "categoria": "📚 Escuela",
-    "pagina": "escuela.html"
+    "pagina": "escuela.html",
+    "disponible": true
   },
   "maleta": {
     "label": "Maleta",
     "categoria": "📚 Escuela",
-    "pagina": "escuela.html"
+    "pagina": "escuela.html",
+    "disponible": true
   },
   "abuelo": {
     "label": "Abuelo",
     "categoria": "Familia",
-    "pagina": "familia.html"
+    "pagina": "familia.html",
+    "disponible": true
   },
   "mama": {
     "label": "Mamá",
     "categoria": "Familia",
-    "pagina": "familia.html"
+    "pagina": "familia.html",
+    "disponible": true
   },
   "papa": {
     "label": "Papá",
     "categoria": "Familia",
-    "pagina": "familia.html"
+    "pagina": "familia.html",
+    "disponible": true
   },
   "hijo": {
     "label": "Hijo",
     "categoria": "Familia",
-    "pagina": "familia.html"
+    "pagina": "familia.html",
+    "disponible": true
   },
   "familia": {
     "label": "Familia",
     "categoria": "Familia",
-    "pagina": "familia.html"
+    "pagina": "familia.html",
+    "disponible": true
   },
   "profesor": {
     "label": "Profesor",
     "categoria": "Profesiones",
-    "pagina": "profesiones.html"
+    "pagina": "profesiones.html",
+    "disponible": true
   },
   "cantante": {
     "label": "Cantante",
     "categoria": "Profesiones",
-    "pagina": "profesiones.html"
+    "pagina": "profesiones.html",
+    "disponible": true
   },
   "enfermera": {
     "label": "Enfermera",
     "categoria": "Profesiones",
-    "pagina": "profesiones.html"
+    "pagina": "profesiones.html",
+    "disponible": true
   },
   "ingeniero": {
     "label": "Ingeniero",
     "categoria": "Profesiones",
-    "pagina": "profesiones.html"
+    "pagina": "profesiones.html",
+    "disponible": true
   },
   "policia": {
     "label": "Policía",
     "categoria": "Profesiones",
-    "pagina": "profesiones.html"
+    "pagina": "profesiones.html",
+    "disponible": true
   },
   "psicologo": {
     "label": "Psicólogo",
     "categoria": "Profesiones",
-    "pagina": "profesiones.html"
+    "pagina": "profesiones.html",
+    "disponible": true
   },
   "hola": {
     "label": "Hola",
     "categoria": "Saludos",
-    "pagina": "saludos.html"
+    "pagina": "saludos.html",
+    "disponible": true
   },
   "buenos_dias": {
     "label": "Buenos días",
     "categoria": "Saludos",
-    "pagina": "saludos.html"
+    "pagina": "saludos.html",
+    "disponible": true
   },
   "buenas_tardes": {
     "label": "Buenas tardes",
     "categoria": "Saludos",
-    "pagina": "saludos.html"
+    "pagina": "saludos.html",
+    "disponible": true
   },
   "buenas_noches": {
     "label": "Buenas noches",
     "categoria": "Saludos",
-    "pagina": "saludos.html"
+    "pagina": "saludos.html",
+    "disponible": true
   },
   "como_estas": {
     "label": "¿Cómo estás?",
     "categoria": "Saludos",
-    "pagina": "saludos.html"
+    "pagina": "saludos.html",
+    "disponible": true
   },
   "casa": {
     "label": "Casa",
     "categoria": "🏠 Vida Diaria",
-    "pagina": "vidadiaria.html"
+    "pagina": "vidadiaria.html",
+    "disponible": true
   },
   "comer": {
     "label": "Comer",
     "categoria": "🏠 Vida Diaria",
-    "pagina": "vidadiaria.html"
+    "pagina": "vidadiaria.html",
+    "disponible": false
   },
   "dormir": {
     "label": "Dormir",
     "categoria": "🏠 Vida Diaria",
-    "pagina": "vidadiaria.html"
+    "pagina": "vidadiaria.html",
+    "disponible": true
   },
   "trabajar": {
     "label": "Trabajar",
     "categoria": "🏠 Vida Diaria",
-    "pagina": "vidadiaria.html"
+    "pagina": "vidadiaria.html",
+    "disponible": true
   },
   "caminar": {
     "label": "Caminar",
     "categoria": "🏠 Vida Diaria",
-    "pagina": "vidadiaria.html"
+    "pagina": "vidadiaria.html",
+    "disponible": true
   },
   "tiempo": {
     "label": "Tiempo",
     "categoria": "🏠 Vida Diaria",
-    "pagina": "vidadiaria.html"
+    "pagina": "vidadiaria.html",
+    "disponible": true
+  },
+  "verde": {
+    "label": "Verde",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": false
+  },
+  "morado": {
+    "label": "Morado",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": false
+  },
+  "cafe": {
+    "label": "Café",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": false
+  },
+  "gris": {
+    "label": "Gris",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": false
+  },
+  "celeste": {
+    "label": "Celeste",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": false
+  },
+  "dorado": {
+    "label": "Dorado",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": false
+  },
+  "violeta": {
+    "label": "Violeta",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": false
+  },
+  "beige": {
+    "label": "Beige",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": false
+  },
+  "cabello": {
+    "label": "Cabello",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "nariz": {
+    "label": "Nariz",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "dientes": {
+    "label": "Dientes",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "orejas": {
+    "label": "Orejas",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "cuello": {
+    "label": "Cuello",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "hombros": {
+    "label": "Hombros",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "dedos": {
+    "label": "Dedos",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "espalda": {
+    "label": "Espalda",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "piernas": {
+    "label": "Piernas",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "rodilla": {
+    "label": "Rodilla",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "corazon": {
+    "label": "Corazón",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "estomago": {
+    "label": "Estómago",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "cerebro": {
+    "label": "Cerebro",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "piel": {
+    "label": "Piel",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "sangre": {
+    "label": "Sangre",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "garganta": {
+    "label": "Garganta",
+    "categoria": "💪 Cuerpo humano",
+    "pagina": "cuerpo.html",
+    "disponible": false
+  },
+  "toro": {
+    "label": "Toro",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "cerdo": {
+    "label": "Cerdo",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "oveja": {
+    "label": "Oveja",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "gallina": {
+    "label": "Gallina",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "pato": {
+    "label": "Pato",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "conejo": {
+    "label": "Conejo",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "leon": {
+    "label": "León",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "tigre": {
+    "label": "Tigre",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "elefante": {
+    "label": "Elefante",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "mono": {
+    "label": "Mono",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "oso": {
+    "label": "Oso",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "serpiente": {
+    "label": "Serpiente",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "tortuga": {
+    "label": "Tortuga",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "pez": {
+    "label": "Pez",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "delfin": {
+    "label": "Delfín",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "aguila": {
+    "label": "Águila",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "mariposa": {
+    "label": "Mariposa",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "abeja": {
+    "label": "Abeja",
+    "categoria": "🐾 Animales",
+    "pagina": "animales.html",
+    "disponible": false
+  },
+  "hija": {
+    "label": "Hija",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "hermano": {
+    "label": "Hermano",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "hermana": {
+    "label": "Hermana",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "abuela": {
+    "label": "Abuela",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "tio": {
+    "label": "Tío",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "tia": {
+    "label": "Tía",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "primo": {
+    "label": "Primo",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "prima": {
+    "label": "Prima",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "esposo": {
+    "label": "Esposo",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "esposa": {
+    "label": "Esposa",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "novio": {
+    "label": "Novio",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "novia": {
+    "label": "Novia",
+    "categoria": "👨‍👩‍👦 Familia",
+    "pagina": "familia.html",
+    "disponible": false
+  },
+  "medico": {
+    "label": "Médico",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "abogado": {
+    "label": "Abogado",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "bombero": {
+    "label": "Bombero",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "arquitecto": {
+    "label": "Arquitecto",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "cocinero": {
+    "label": "Cocinero",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "electricista": {
+    "label": "Electricista",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "mecanico": {
+    "label": "Mecánico",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "conductor": {
+    "label": "Conductor",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "agricultor": {
+    "label": "Agricultor",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "vendedor": {
+    "label": "Vendedor",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "programador": {
+    "label": "Programador",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "periodista": {
+    "label": "Periodista",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "actor": {
+    "label": "Actor",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "veterinario": {
+    "label": "Veterinario",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "peluquero": {
+    "label": "Peluquero",
+    "categoria": "💼 Profesiones",
+    "pagina": "profesiones.html",
+    "disponible": false
+  },
+  "enojado": {
+    "label": "Enojado",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "asustado": {
+    "label": "Asustado",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "aburrido": {
+    "label": "Aburrido",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "cansado": {
+    "label": "Cansado",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "nervioso": {
+    "label": "Nervioso",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "tranquilo": {
+    "label": "Tranquilo",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "preocupado": {
+    "label": "Preocupado",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "orgulloso": {
+    "label": "Orgulloso",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "enamorado": {
+    "label": "Enamorado",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "confundido": {
+    "label": "Confundido",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "emocionado": {
+    "label": "Emocionado",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "agradecido": {
+    "label": "Agradecido",
+    "categoria": "😊 Emociones",
+    "pagina": "emociones.html",
+    "disponible": false
+  },
+  "universidad": {
+    "label": "Universidad",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "estudiante": {
+    "label": "Estudiante",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "tablero": {
+    "label": "Tablero",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "lapiz": {
+    "label": "Lápiz",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "libro": {
+    "label": "Libro",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "examen": {
+    "label": "Examen",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "tarea": {
+    "label": "Tarea",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "biblioteca": {
+    "label": "Biblioteca",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "recreo": {
+    "label": "Recreo",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "matematicas": {
+    "label": "Matemáticas",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "historia": {
+    "label": "Historia",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "espanol": {
+    "label": "Español",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "ingles": {
+    "label": "Inglés",
+    "categoria": "🏫 Escuela",
+    "pagina": "escuela.html",
+    "disponible": false
+  },
+  "pan": {
+    "label": "Pan",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "huevo": {
+    "label": "Huevo",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "queso": {
+    "label": "Queso",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "leche": {
+    "label": "Leche",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "tomate": {
+    "label": "Tomate",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "cebolla": {
+    "label": "Cebolla",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "zanahoria": {
+    "label": "Zanahoria",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "aguacate": {
+    "label": "Aguacate",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "mango": {
+    "label": "Mango",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "pina": {
+    "label": "Piña",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "manzana": {
+    "label": "Manzana",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "naranja_fruta": {
+    "label": "Naranja",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "banano": {
+    "label": "Banano",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "azucar": {
+    "label": "Azúcar",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "sal": {
+    "label": "Sal",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "agua": {
+    "label": "Agua",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "jugo": {
+    "label": "Jugo",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "chocolate": {
+    "label": "Chocolate",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "empanada": {
+    "label": "Empanada",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "arepa": {
+    "label": "Arepa",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": false
+  },
+  "cero": {
+    "label": "Cero",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "uno": {
+    "label": "Uno",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "dos": {
+    "label": "Dos",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "tres": {
+    "label": "Tres",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "cuatro": {
+    "label": "Cuatro",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "cinco": {
+    "label": "Cinco",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "seis": {
+    "label": "Seis",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "siete": {
+    "label": "Siete",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "ocho": {
+    "label": "Ocho",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "nueve": {
+    "label": "Nueve",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "diez": {
+    "label": "Diez",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "veinte": {
+    "label": "Veinte",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "treinta": {
+    "label": "Treinta",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "cincuenta": {
+    "label": "Cincuenta",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "cien": {
+    "label": "Cien",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "mil": {
+    "label": "Mil",
+    "categoria": "🔢 Números",
+    "pagina": "categoria.html?c=numeros",
+    "disponible": false
+  },
+  "camisa": {
+    "label": "Camisa",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "camiseta": {
+    "label": "Camiseta",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "pantalon": {
+    "label": "Pantalón",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "falda": {
+    "label": "Falda",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "vestido": {
+    "label": "Vestido",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "chaqueta": {
+    "label": "Chaqueta",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "zapatos": {
+    "label": "Zapatos",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "sombrero": {
+    "label": "Sombrero",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "gorra": {
+    "label": "Gorra",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "guantes": {
+    "label": "Guantes",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "bufanda": {
+    "label": "Bufanda",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "medias": {
+    "label": "Medias",
+    "categoria": "👕 Ropa",
+    "pagina": "categoria.html?c=ropa",
+    "disponible": false
+  },
+  "cocina": {
+    "label": "Cocina",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "sala": {
+    "label": "Sala",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "bano": {
+    "label": "Baño",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "puerta": {
+    "label": "Puerta",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "ventana": {
+    "label": "Ventana",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "mesa": {
+    "label": "Mesa",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "silla": {
+    "label": "Silla",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "cama": {
+    "label": "Cama",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "nevera": {
+    "label": "Nevera",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "televisor": {
+    "label": "Televisor",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "ducha": {
+    "label": "Ducha",
+    "categoria": "🏠 Hogar",
+    "pagina": "categoria.html?c=hogar",
+    "disponible": false
+  },
+  "carro": {
+    "label": "Carro",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "bus": {
+    "label": "Bus",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "taxi": {
+    "label": "Taxi",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "moto": {
+    "label": "Moto",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "bicicleta": {
+    "label": "Bicicleta",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "tren": {
+    "label": "Tren",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "metro": {
+    "label": "Metro",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "avion": {
+    "label": "Avión",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "barco": {
+    "label": "Barco",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "semaforo": {
+    "label": "Semáforo",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "calle": {
+    "label": "Calle",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "aeropuerto": {
+    "label": "Aeropuerto",
+    "categoria": "🚌 Transporte",
+    "pagina": "categoria.html?c=transporte",
+    "disponible": false
+  },
+  "lunes": {
+    "label": "Lunes",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "martes": {
+    "label": "Martes",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "miercoles": {
+    "label": "Miércoles",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "jueves": {
+    "label": "Jueves",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "viernes": {
+    "label": "Viernes",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "sabado": {
+    "label": "Sábado",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "domingo": {
+    "label": "Domingo",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "hoy": {
+    "label": "Hoy",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "manana": {
+    "label": "Mañana",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "ayer": {
+    "label": "Ayer",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "semana": {
+    "label": "Semana",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "mes": {
+    "label": "Mes",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "ano": {
+    "label": "Año",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "cumpleanos": {
+    "label": "Cumpleaños",
+    "categoria": "📅 Fechas y tiempo",
+    "pagina": "categoria.html?c=fechas",
+    "disponible": false
+  },
+  "futbol": {
+    "label": "Fútbol",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "baloncesto": {
+    "label": "Baloncesto",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "voleibol": {
+    "label": "Voleibol",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "natacion": {
+    "label": "Natación",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "ciclismo": {
+    "label": "Ciclismo",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "beisbol": {
+    "label": "Béisbol",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "boxeo": {
+    "label": "Boxeo",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "correr": {
+    "label": "Correr",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "nadar": {
+    "label": "Nadar",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "ganar": {
+    "label": "Ganar",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "perder": {
+    "label": "Perder",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "jugador": {
+    "label": "Jugador",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": false
+  },
+  "hospital": {
+    "label": "Hospital",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": false
+  },
+  "farmacia": {
+    "label": "Farmacia",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": false
+  },
+  "medicina": {
+    "label": "Medicina",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": false
+  },
+  "fiebre": {
+    "label": "Fiebre",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": false
+  },
+  "dolor": {
+    "label": "Dolor",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": false
+  },
+  "gripe": {
+    "label": "Gripe",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": false
+  },
+  "vacuna": {
+    "label": "Vacuna",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": false
+  },
+  "cita_medica": {
+    "label": "Cita médica",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": false
+  },
+  "discapacidad": {
+    "label": "Discapacidad",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": false
+  },
+  "sol": {
+    "label": "Sol",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "luna": {
+    "label": "Luna",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "estrella": {
+    "label": "Estrella",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "cielo": {
+    "label": "Cielo",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "lluvia": {
+    "label": "Lluvia",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "viento": {
+    "label": "Viento",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "nieve": {
+    "label": "Nieve",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "calor": {
+    "label": "Calor",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "frio": {
+    "label": "Frío",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": true
+  },
+  "montana": {
+    "label": "Montaña",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "rio": {
+    "label": "Río",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "mar": {
+    "label": "Mar",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "arbol": {
+    "label": "Árbol",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "flor": {
+    "label": "Flor",
+    "categoria": "🌿 Naturaleza y clima",
+    "pagina": "categoria.html?c=naturaleza",
+    "disponible": false
+  },
+  "ciudad": {
+    "label": "Ciudad",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "barrio": {
+    "label": "Barrio",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "parque": {
+    "label": "Parque",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "iglesia": {
+    "label": "Iglesia",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "banco": {
+    "label": "Banco",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "supermercado": {
+    "label": "Supermercado",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "restaurante": {
+    "label": "Restaurante",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "hotel": {
+    "label": "Hotel",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "zoologico": {
+    "label": "Zoológico",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "cine": {
+    "label": "Cine",
+    "categoria": "🏙️ Lugares y ciudad",
+    "pagina": "categoria.html?c=lugares",
+    "disponible": false
+  },
+  "computador": {
+    "label": "Computador",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "celular": {
+    "label": "Celular",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "internet": {
+    "label": "Internet",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "teclado": {
+    "label": "Teclado",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "pantalla": {
+    "label": "Pantalla",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "mouse": {
+    "label": "Mouse",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "tableta": {
+    "label": "Tableta",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "camara": {
+    "label": "Cámara",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "contrasena": {
+    "label": "Contraseña",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "video": {
+    "label": "Video",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "mensaje": {
+    "label": "Mensaje",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "wifi": {
+    "label": "Wifi",
+    "categoria": "💻 Tecnología",
+    "pagina": "categoria.html?c=tecnologia",
+    "disponible": false
+  },
+  "beber": {
+    "label": "Beber",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "hablar": {
+    "label": "Hablar",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "escuchar": {
+    "label": "Escuchar",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "escribir": {
+    "label": "Escribir",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "leer": {
+    "label": "Leer",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "estudiar": {
+    "label": "Estudiar",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "jugar": {
+    "label": "Jugar",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "comprar": {
+    "label": "Comprar",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "ayudar": {
+    "label": "Ayudar",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "aprender": {
+    "label": "Aprender",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "amar": {
+    "label": "Amar",
+    "categoria": "🏃 Verbos comunes",
+    "pagina": "categoria.html?c=verbos",
+    "disponible": false
+  },
+  "grande": {
+    "label": "Grande",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "pequeno": {
+    "label": "Pequeño",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "alto": {
+    "label": "Alto",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "bajo": {
+    "label": "Bajo",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "bonito": {
+    "label": "Bonito",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "feo": {
+    "label": "Feo",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "nuevo": {
+    "label": "Nuevo",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "viejo": {
+    "label": "Viejo",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "rapido": {
+    "label": "Rápido",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "lento": {
+    "label": "Lento",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "facil": {
+    "label": "Fácil",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "dificil": {
+    "label": "Difícil",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "limpio": {
+    "label": "Limpio",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
+  },
+  "sucio": {
+    "label": "Sucio",
+    "categoria": "🔤 Adjetivos comunes",
+    "pagina": "categoria.html?c=adjetivos",
+    "disponible": false
   }
 }

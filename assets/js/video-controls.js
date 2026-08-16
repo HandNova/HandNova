@@ -2,17 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('video[controls]').forEach(function (video) {
     video.removeAttribute('controls');
     video.muted = true;
-
-    /* Accesibilidad: si hay un texto cercano con el nombre de la seña
-       (ej. "Rojo", "Hola"), lo usamos como aria-label del video para
-       que un lector de pantalla sepa qué seña se está mostrando. */
-    var tarjeta = video.closest('.video-card, .question, .resultado-video-wrap, .video-wrapper');
-    var etiquetaEl = tarjeta && tarjeta.querySelector('.video-label, h2, .resultado-palabra');
-    if (etiquetaEl && etiquetaEl.textContent.trim()) {
-      video.setAttribute('aria-label', 'Video de la seña: ' + etiquetaEl.textContent.trim());
-    } else {
-      video.setAttribute('aria-label', 'Video de una seña en Lengua de Señas Colombiana');
-    }
     video.addEventListener('loadedmetadata', function () {
     video.currentTime = 0.01;
     },  { once: true });
@@ -28,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var bar = document.createElement('div');
     bar.className = 'svg-video-bar';
     bar.innerHTML =
-      '<button class="svg-video-play" type="button" aria-label="Reproducir o pausar video">▶</button>' +
-      '<input class="svg-video-progress" type="range" min="0" max="100" step="0.1" value="0" aria-label="Progreso del video">' +
-      '<button class="svg-video-full" type="button" aria-label="Ver en pantalla completa">⛶</button>';
+      '<button class="svg-video-play" type="button">▶</button>' +
+      '<input class="svg-video-progress" type="range" min="0" max="100" step="0.1" value="0">' +
+      '<button class="svg-video-full" type="button">⛶</button>';
     frame.appendChild(bar);
 
     var playBtn = bar.querySelector('.svg-video-play');
@@ -54,17 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fullBtn.addEventListener('click', function () {
       if (frame.requestFullscreen) frame.requestFullscreen();
       else if (frame.webkitRequestFullscreen) frame.webkitRequestFullscreen();
-    });
-
-    /* Si el video no carga (archivo faltante o dañado), mostramos un
-       mensaje amigable en vez de dejar un reproductor roto. */
-    video.addEventListener('error', function () {
-      frame.classList.add('svg-video-error');
-      frame.innerHTML =
-        '<div class="svg-video-error-msg">' +
-          '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/><line x1="1" y1="5" x2="16" y2="19"/></svg>' +
-          '<span>Video no disponible por ahora</span>' +
-        '</div>';
     });
   });
 });

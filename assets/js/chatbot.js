@@ -73,8 +73,8 @@
       r: 'HANDNOVA funciona directamente desde el navegador y su diseño se adapta a celular, tablet y computador. No necesitas descargar ninguna aplicación.' },
     { p: ['tengo que registrarme para usar la pagina', 'necesito crear cuenta para ver las lecciones'],
       r: 'Puedes explorar las categorías, el abecedario y el buscador sin necesidad de registrarte. Crear una cuenta es solo necesario si quieres guardar tu progreso, tu racha y tus logros.' },
-    { p: ['necesito camara', 'necesito una webcam', 'para que sirve la camara', 'puedo practicar con la camara', 'hay reconocimiento de manos'],
-      r: 'Por ahora no necesitas cámara para nada en HANDNOVA: ver videos de señas, jugar, hacer el Quiz o usar el buscador no la requieren. El reconocimiento de manos por cámara existe como módulo de machine learning en desarrollo, pero todavía no está integrado como una función disponible dentro de la plataforma web.' },
+    { p: ['necesito camara', 'necesito una webcam', 'para que sirve la camara'],
+      r: 'La cámara solo es necesaria si usas las herramientas de práctica con reconocimiento de manos (parte del módulo de machine learning del proyecto). Para ver videos de señas, jugar o consultar el buscador no la necesitas.' },
     { p: ['que secciones tiene HANDNOVA', 'que puedo hacer en HANDNOVA', 'que opciones tiene el menu'],
       r: 'El menú principal tiene: Categorías (lecciones por tema), Abecedario, Buscar (encuentra una seña por palabra), Cuenta, y en "Más": Juego, Quiz y Progreso.' },
     { p: ['HANDNOVA sirve para intérpretes', 'sirve para nivel avanzado'],
@@ -156,29 +156,21 @@
 
     /* ---- 7. Juegos: overview ---- */
     { p: ['que juegos hay', 'que juegos tiene HANDNOVA', 'donde estan los juegos', 'juegos'],
-      r: 'HANDNOVA tiene 4 formas de practicar: el Quiz (preguntas de opción múltiple por niveles de dificultad) y 3 juegos en la sección "Juego": Busca Parejas (relacionar palabra y video), Deletreo (deletrear la palabra de una seña) y Contrarreloj (adivina la seña antes de que se acabe el tiempo). Los encuentras en el menú "Más".' },
+      r: 'HANDNOVA tiene 3 juegos: Quiz (preguntas de opción múltiple), Busca Parejas (relacionar palabra y video) y Contrarreloj (adivina la seña antes de que se acabe el tiempo). Los encuentras en el menú "Más".' },
     { p: ['como entro a los juegos', 'donde esta la seccion de juegos'],
-      r: 'Ve al menú "Más": ahí tienes "Juego" (con las 3 opciones: Busca Parejas, Deletreo y Contrarreloj) y, aparte, "Quiz" con sus niveles de dificultad.' },
+      r: 'Ve al menú "Más" y toca "Juego"; ahí verás las 3 opciones disponibles: Quiz, Busca Parejas y Contrarreloj.' },
     { p: ['los juegos sirven para practicar', 'para que sirven los juegos'],
-      r: 'Los juegos y el Quiz son una forma divertida de repasar el vocabulario que ya viste en las categorías y el abecedario, reforzando la memoria visual de cada seña.' },
+      r: 'Los juegos son una forma divertida de repasar el vocabulario que ya viste en las categorías, reforzando la memoria visual de cada seña.' },
     { p: ['hay tabla de puntajes', 'hay ranking en los juegos', 'se guardan los puntajes'],
-      r: 'Tus mejores puntajes se guardan en tu progreso local (por ejemplo, tu mejor puntaje de Quiz por nivel, o tu combo máximo en Contrarreloj), y algunos de ellos desbloquean logros.' },
+      r: 'Tus mejores puntajes se guardan en tu progreso local (por ejemplo, tu mejor puntaje de Quiz), y algunos de ellos desbloquean logros.' },
 
     /* ---- 7b. Quiz ---- */
     { p: ['como funciona el quiz', 'como se juega el quiz', 'quiz', 'uso el juego de quiz'],
-      r: 'En el Quiz eliges un nivel de dificultad (Fácil, Normal, Difícil o Experto) y respondes preguntas de opción múltiple con un tiempo límite por pregunta. Las preguntas mezclan categorías y abecedario, no se elige un tema específico.' },
-    { p: ['puedo elegir la categoria del quiz', 'el quiz tiene categorias', 'el quiz se elige por categoria'],
-      r: 'No, el Quiz ya no se elige por categoría: ahora eliges un nivel de dificultad y las preguntas combinan vocabulario de varias categorías junto con el abecedario.' },
-    { p: ['que niveles tiene el quiz', 'que dificultades tiene el quiz', 'niveles de dificultad del quiz', 'dificultad del quiz'],
-      r: 'El Quiz tiene 4 niveles: 🌱 Fácil (5 preguntas, 25s cada una, aprobar con 50%), ⚡ Normal (8 preguntas, 15s, 60%), 🔥 Difícil (12 preguntas, 10s, 70%) y 👑 Experto (16 preguntas, 6s, 80%). Puedes elegir cualquiera desde la pantalla inicial del Quiz.' },
-    { p: ['como paso de nivel en el quiz', 'como desbloqueo el siguiente nivel del quiz', 'como subo de dificultad en el quiz'],
-      r: 'No es obligatorio seguir un orden: puedes intentar cualquier nivel cuando quieras. Eso sí, si no has aprobado al menos 3 quizzes del nivel anterior, te avisamos que ese nivel puede ser difícil todavía, pero puedes jugarlo igual si lo prefieres.' },
-    { p: ['cuanto tiempo tengo para responder en el quiz', 'el quiz tiene tiempo limite', 'el quiz tiene cronometro'],
-      r: 'Sí, cada pregunta tiene un tiempo límite que depende del nivel: 25s en Fácil, 15s en Normal, 10s en Difícil y solo 6s en Experto. Si se acaba el tiempo, la pregunta se cuenta como fallada.' },
-    { p: ['que porcentaje necesito para aprobar el quiz', 'cuanto necesito para aprobar el quiz', 'con cuanto se aprueba el quiz'],
-      r: 'El porcentaje para aprobar sube con la dificultad: 50% en Fácil, 60% en Normal, 70% en Difícil y 80% en Experto.' },
+      r: 'En el Quiz eliges una categoría y respondes preguntas de opción múltiple sobre las señas de esa categoría. Pon a prueba lo que ya aprendiste.' },
+    { p: ['puedo elegir la categoria del quiz', 'el quiz tiene categorias'],
+      r: 'Sí, al entrar al Quiz primero eliges la categoría que quieres practicar (por ejemplo, Colores o Animales) antes de empezar las preguntas.' },
     { p: ['que logro desbloquea el quiz', 'hay logro por el quiz'],
-      r: 'El Quiz tiene 3 logros propios: "Primer quiz" (completar tu primer quiz), "Puntaje perfecto" (sacar 90% o más en un quiz) y "Nivel Experto dominado" (aprobar 3 quizzes en el nivel Experto).' },
+      r: 'Hay logros como "Primer quiz" (completar tu primer quiz) y "Puntaje 10+" (sacar 10 puntos o más en un quiz).' },
 
     /* ---- 7c. Busca Parejas / juego.html ---- */
     { p: ['como funciona busca parejas', 'como se juega busca parejas', 'que es el juego de parejas', 'parejas', 'busca parejas'],
@@ -214,7 +206,7 @@
     { p: ['puedo cambiar mis datos de cuenta', 'como edito mi perfil'],
       r: 'En la sección "Cuenta" puedes gestionar la información de tu perfil una vez hayas iniciado sesión.' },
     { p: ['mis datos estan seguros', 'donde se guardan mis datos'],
-      r: 'Tu información de cuenta se guarda en Firebase (Firestore), protegida con reglas de seguridad que solo dejan leer o escribir tu propio perfil. Tu progreso de juego y logros se guardan localmente en tu navegador y, si iniciaste sesión, también se sincronizan a la nube.' },
+      r: 'Tu información de cuenta se guarda en la base de datos del proyecto (PHP + MariaDB); tu progreso de juego y logros se guardan localmente en tu navegador.' },
 
     /* ---- 9. Progreso, racha, XP y logros ---- */
     { p: ['como veo mi progreso', 'donde esta mi progreso', 'progreso'],
@@ -224,25 +216,17 @@
     { p: ['que es el xp', 'que es el nivel', 'como subo de nivel'],
       r: 'El XP son puntos de experiencia que ganas al usar la plataforma (jugar, completar retos, etc.). Al acumular suficiente XP subes de nivel dentro de HANDNOVA.' },
     { p: ['que son los logros', 'donde veo mis logros', 'que logros hay', 'logros'],
-      r: 'Los logros son insignias que desbloqueas al cumplir ciertos retos: por ejemplo crear tu cuenta, jugar tu primer quiz, usar el buscador, jugar 5 partidas, visitar 5 categorías, mantener una racha, o dominar el nivel Experto del Quiz. Los ves en la sección Progreso.' },
+      r: 'Los logros son insignias que desbloqueas al cumplir ciertos retos: por ejemplo crear tu cuenta, jugar tu primer quiz, usar el buscador, jugar 5 partidas, visitar 5 categorías, o mantener una racha de 7 días. Los ves en la sección Progreso.' },
     { p: ['cuantos logros hay', 'cuantos logros puedo desbloquear'],
-      r: 'Actualmente hay 13 logros disponibles en HANDNOVA, desde "Perfil creado" hasta "Nivel Experto dominado".' },
-    { p: ['que logros hay disponibles', 'lista de logros', 'cuales son todos los logros'],
-      r: 'Los 13 logros son: Perfil creado, Primer quiz, Puntaje perfecto (90%+ en un quiz), Usaste el buscador, 5 partidas, Explorador (5 categorías visitadas), Velocista (jugar Contrarreloj), Combo x3 (en Contrarreloj), Deletreo LSC (completar el reto), Constante (racha de 3 días), Racha de 7 días, Maestro de señas (20 partidas) y Nivel Experto dominado (3 quizzes aprobados en Experto).' },
+      r: 'Actualmente hay 12 logros disponibles en HANDNOVA, desde "Perfil creado" hasta "Maestro de señas" (20 partidas jugadas en total).' },
     { p: ['que es el logro explorador', 'como desbloqueo explorador'],
       r: 'El logro "Explorador" se desbloquea al visitar 5 categorías distintas de lecciones.' },
     { p: ['que es el logro velocista', 'como desbloqueo velocista'],
       r: 'El logro "Velocista" se desbloquea al jugar una ronda del juego Contrarreloj.' },
-    { p: ['que es el logro combo', 'como desbloqueo combo x3', 'que es el logro combo x3'],
-      r: 'El logro "Combo x3" se desbloquea al encadenar 3 aciertos seguidos (combo x3) en el juego Contrarreloj.' },
-    { p: ['que es el logro deletreo', 'como desbloqueo el logro de deletreo'],
-      r: 'El logro "Deletreo LSC" se desbloquea al completar una ronda del juego Deletreo.' },
     { p: ['que es el logro constante', 'como desbloqueo constante'],
       r: 'El logro "Constante" se desbloquea al mantener una racha de 3 días seguidos practicando en HANDNOVA.' },
     { p: ['que es el logro maestro de senas', 'como desbloqueo maestro de senas'],
-      r: 'El logro "Maestro de señas" se desbloquea al jugar 20 partidas en total, sumando Quiz, Busca Parejas, Contrarreloj y Deletreo.' },
-    { p: ['que es el logro nivel experto dominado', 'como desbloqueo nivel experto dominado', 'logro experto'],
-      r: 'El logro "Nivel Experto dominado" 👑 se desbloquea al aprobar 3 quizzes en el nivel Experto del Quiz (16 preguntas, 6 segundos cada una, mínimo 80% para aprobar).' },
+      r: 'El logro "Maestro de señas" se desbloquea al jugar 20 partidas en total, sumando todos los juegos de la plataforma.' },
     { p: ['mi progreso se guarda si cambio de dispositivo', 'mi progreso se sincroniza entre dispositivos'],
       r: 'Tu racha, XP y logros se guardan en el navegador de tu dispositivo (localStorage), así que si cambias de celular o computador o borras los datos del navegador, ese progreso local no se transfiere automáticamente.' },
     { p: ['como veo mi historial', 'donde esta mi historial reciente'],
@@ -260,7 +244,7 @@
     { p: ['tengo un error', 'la pagina no carga', 'un video no funciona', 'encontre un bug'],
       r: 'Lamento el inconveniente. Intenta recargar la página; si el problema sigue, revisa tu conexión a internet. Este chat no puede corregir errores técnicos directamente, pero puedes reportarlo a quien administre el proyecto.' },
     { p: ['en que lenguaje esta hecho HANDNOVA', 'con que tecnologia esta hecho'],
-      r: 'El frontend está hecho en HTML, CSS y JavaScript; las cuentas y el progreso en la nube usan Firebase (Authentication y Firestore), y hay un módulo aparte en Python para el reconocimiento de manos, todavía no integrado a la web.' },
+      r: 'El frontend está hecho en HTML, CSS y JavaScript; el backend usa PHP con base de datos MariaDB, y hay un módulo aparte en Python para el reconocimiento de manos.' },
     { p: ['puedo contribuir al proyecto', 'como colaboro con HANDNOVA'],
       r: 'HANDNOVA es un proyecto formativo; si quieres colaborar o sugerir mejoras, lo mejor es contactar directamente a quienes lo desarrollan.' },
   ];
@@ -400,7 +384,6 @@
       .sv-cb-chip:hover { background: rgba(124,58,237,.08); }
 
       .sv-cb-form { display: flex; gap: 8px; padding: 10px; border-top: 1px solid #eee; flex-shrink: 0; background: white; }
-      .sv-cb-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
       .sv-cb-input {
         flex: 1; border: 1px solid #e2e2e2; border-radius: 20px; padding: 9px 14px; font-size: 13px;
         font-family: inherit; outline: none;
@@ -442,7 +425,6 @@
     burbuja.className = 'sv-cb-burbuja';
     burbuja.type = 'button';
     burbuja.title = 'Asistente HANDNOVA';
-    burbuja.setAttribute('aria-label', 'Abrir asistente virtual de HANDNOVA');
     burbuja.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>';
 
     // Panel
@@ -454,16 +436,15 @@
         <div class="sv-cb-header-texto">
           <strong>Asistente HANDNOVA</strong>
         </div>
-        <button type="button" class="sv-cb-cerrar" title="Cerrar" id="sv-cb-cerrar" aria-label="Cerrar asistente virtual">
+        <button type="button" class="sv-cb-cerrar" title="Cerrar" id="sv-cb-cerrar">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
-      <div class="sv-cb-mensajes" id="sv-cb-mensajes" role="log" aria-live="polite"></div>
+      <div class="sv-cb-mensajes" id="sv-cb-mensajes"></div>
       <div class="sv-cb-chips" id="sv-cb-chips"></div>
       <form class="sv-cb-form" id="sv-cb-form">
-        <label for="sv-cb-input" class="sv-cb-sr-only">Escribe tu pregunta para el asistente</label>
         <input class="sv-cb-input" id="sv-cb-input" type="text" autocomplete="off" placeholder="Escribe tu pregunta..." maxlength="200">
-        <button class="sv-cb-enviar" type="submit" id="sv-cb-enviar" title="Enviar" aria-label="Enviar pregunta">
+        <button class="sv-cb-enviar" type="submit" id="sv-cb-enviar" title="Enviar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
       </form>

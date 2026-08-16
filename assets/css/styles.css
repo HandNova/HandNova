@@ -2,7 +2,7 @@
 /* hice este archivo para no repetir los estilos en cada pagina */
 
 /* fuentes de google */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* variables de colores principales */
 :root {
@@ -26,7 +26,7 @@
   --radio-md: 16px;
   --radio-lg: 22px;
   --vidrio-bg: rgba(255, 255, 255, 0.72);
-  --font-titulos: 'Outfit', sans-serif;
+  --font-titulos: 'Plus Jakarta Sans', 'Poppins', sans-serif;
   --font-cuerpo: 'Plus Jakarta Sans', 'Poppins', sans-serif;
 }
 
@@ -37,10 +37,14 @@
   box-sizing: border-box;
 }
 
+html { height: 100%; }
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--azul-fondo);
   color: var(--negro);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ---- NAVBAR ---- */
@@ -644,9 +648,9 @@ footer {
   background-color: var(--negro);
   color: rgba(255, 255, 255, 0.55);
   text-align: center;
-  padding: 24px 20px;
+  padding: 40px 20px 24px;
   font-size: 14px;
-  margin-top: 70px;
+  margin-top: auto; /* pega el footer abajo cuando el contenido es corto (ej. quiz.html) */
 }
 
 footer strong {
@@ -904,10 +908,8 @@ footer strong {
   color: var(--morado);
 }
 
-/* Mostrar menú: con el mouse (hover), con teclado (focus-within) o con clic/Enter (.dropdown-abierto vía JS) */
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu,
-.dropdown.dropdown-abierto .dropdown-menu {
+/* Mostrar menú */
+.dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -1067,21 +1069,14 @@ body.modo-oscuro .video-wrapper { background-color: #000; }
 }
 
 .svg-video-frame { position: relative; }
-.svg-video-frame:fullscreen { background: #000; display: flex; flex-direction: column; }
-.svg-video-frame:-webkit-full-screen { background: #000; display: flex; flex-direction: column; }
+.svg-video-frame:fullscreen { background: #000; display: flex; flex-direction: column; width: 100%; height: 100%; }
+.svg-video-frame:-webkit-full-screen { background: #000; display: flex; flex-direction: column; width: 100%; height: 100%; }
 .svg-video-frame:fullscreen .video-wrapper,
-.svg-video-frame:-webkit-full-screen .video-wrapper { flex: 1; height: 100% !important; }
-
-.svg-video-frame.svg-video-error {
-  display: flex; align-items: center; justify-content: center;
-  min-height: 140px; background: #f3f2fb; border-radius: 14px;
-  border: 1.5px dashed #d8d3f5;
-}
-.svg-video-error-msg {
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  color: var(--gris-suave); font-size: 0.82rem; font-weight: 600; text-align: center; padding: 18px;
-}
-.svg-video-error-msg svg { color: var(--morado); opacity: 0.7; }
+.svg-video-frame:fullscreen .abc-video-wrapper,
+.svg-video-frame:-webkit-full-screen .video-wrapper,
+.svg-video-frame:-webkit-full-screen .abc-video-wrapper { flex: 1; width: 100% !important; height: 100% !important; min-height: 0; }
+.svg-video-frame:fullscreen video,
+.svg-video-frame:-webkit-full-screen video { width: 100% !important; height: 100% !important; }
 
 .svg-video-bar {
   display: flex;
@@ -1096,3 +1091,64 @@ body.modo-oscuro .video-wrapper { background-color: #000; }
   font-size: 16px; cursor: pointer; width: 28px;
 }
 .svg-video-progress { flex: 1; accent-color: var(--cyan); cursor: pointer; }
+/* ==========================================================================
+   TARJETAS "PRÓXIMAMENTE" (palabras nuevas del vocabulario ampliado que
+   todavía no tienen video grabado) — usadas en categorías y en el buscador.
+   ========================================================================== */
+.video-card.proximamente { opacity: 0.9; }
+.video-placeholder-box {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radio-md);
+  background: linear-gradient(135deg, #f3f0ff, #eef9fb);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1.5px dashed #d6cdfb;
+}
+.ph-spinner {
+  width: 26px; height: 26px;
+  border: 3px solid #e0d6ff;
+  border-top-color: var(--morado);
+  border-radius: 50%;
+  animation: ph-girar 0.9s linear infinite;
+}
+@keyframes ph-girar { to { transform: rotate(360deg); } }
+.ph-texto { font-size: 0.78rem; font-weight: 700; color: var(--morado); }
+.ph-sub   { font-size: 0.68rem; color: var(--gris-suave); }
+
+body.modo-oscuro .video-placeholder-box {
+  background: linear-gradient(135deg, #211c33, #16232a);
+  border-color: #3a3260;
+}
+body.modo-oscuro .ph-spinner { border-color: #3a3260; border-top-color: var(--cyan); }
+
+/* Tarjeta de resultado "próximamente" en el buscador */
+.resultado-proximamente {
+  background: white; border-radius: var(--radio-md); padding: 30px 24px;
+  text-align: center; box-shadow: var(--sombra-sm); max-width: 420px; margin: 0 auto;
+}
+body.modo-oscuro .resultado-proximamente { background: #1a1d27; }
+
+/* ==========================================================================
+   PAGINACIÓN de la grilla de categorías
+   ========================================================================== */
+.cats-pagina { display: none; }
+.cats-pagina.activa { display: contents; }
+.paginacion-cats {
+  display: flex; justify-content: center; align-items: center; gap: 16px;
+  margin: 10px 0 60px;
+}
+.btn-pagina {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 26px; border-radius: 30px; border: none;
+  background: var(--morado); color: white; font-weight: 700; font-size: 0.9rem;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.btn-pagina:hover { opacity: 0.88; }
+.btn-pagina:disabled { opacity: 0.35; cursor: not-allowed; }
+.btn-pagina.secundario { background: #f3f4f6; color: var(--negro); }
+body.modo-oscuro .btn-pagina.secundario { background: #232733; color: #e5e7eb; }
+.paginacion-puntos { font-size: 0.82rem; color: var(--gris-suave); font-weight: 600; }

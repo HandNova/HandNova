@@ -141,12 +141,21 @@
     colores: 'Colores', animales: 'Animales', comida: 'Comida', cuerpo: 'Cuerpo humano',
     emociones: 'Emociones', escuela: 'Escuela', familia: 'Familia', profesiones: 'Profesiones',
     saludos: 'Saludos', vidadiaria: 'Vida diaria', abecedario: 'Abecedario',
+    numeros: 'Números', ropa: 'Ropa', hogar: 'Hogar', transporte: 'Transporte',
+    fechas: 'Fechas y tiempo', deportes: 'Deportes', salud: 'Salud',
+    naturaleza: 'Naturaleza y clima', lugares: 'Lugares y ciudad', tecnologia: 'Tecnología',
+    verbos: 'Verbos comunes', adjetivos: 'Adjetivos comunes',
   };
 
   function detectarPagina() {
     const path = location.pathname;
-    if (path.indexOf('/lecciones/') !== -1 && path.indexOf('categorias.html') === -1) {
-      const clave = path.split('/').pop().replace('.html', '');
+    const archivo = path.split('/').pop();
+    if (path.indexOf('/lecciones/') !== -1 && archivo !== 'categorias.html') {
+      // Las categorías nuevas comparten un solo archivo (categoria.html?c=clave);
+      // el resto sigue teniendo un archivo propio (colores.html, animales.html, etc.)
+      const clave = archivo === 'categoria.html'
+        ? new URLSearchParams(location.search).get('c')
+        : archivo.replace('.html', '');
       if (clave) {
         registrarVisitaCategoria(clave);
         registrarHistorial('📖', `Visitaste la categoría ${NOMBRES_CATEGORIA[clave] || clave}`, '');

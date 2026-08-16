@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categoría — HANDNOVA</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>.video-seccion { padding: 0 5% 80px; max-width: 1100px; margin: 0 auto; }</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="../index.html" class="logo">
+    <span class="logo-s">H</span><span class="logo-ig">AND</span><span class="logo-no">NO</span><span class="logo-va">VA</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Inicio</span></a></li>
+    <li><a href="categorias.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Categorías</span></a></li>
+      <li><a href="abecedario.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg><span>Abecedario</span></a></li>
+      <li><a href="../practica/buscar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Buscar</span></a></li>
+      <li><a href="../usuario/cuenta.html" id="nav-cuenta-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="nav-cuenta-label">Cuenta</span></a></li>
+    <li class="dropdown">
+      <a href="#" title="Más opciones"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg><span>Más</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="../practica/juegos.html">🎮 Juego</a></li>
+        <li><a href="../practica/quiz.html">🧠 Quiz</a></li>
+        <li><a href="../usuario/progreso.html">📊 Progreso</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<div style="height:3px;background:linear-gradient(90deg,var(--magenta),#a855f7,var(--cyan))"></div>
+
+<div class="cat-header">
+  <a href="categorias.html" class="btn-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    Volver a categorías
+  </a>
+  <div class="cat-badge" id="catBadge">Categoría</div>
+  <h1 id="catTitulo">Cargando…</h1>
+  <p id="catDesc"></p>
+</div>
+
+<div class="video-seccion">
+  <div class="grid-videos" id="gridVideos"></div>
+</div>
+
+<footer>
+  <strong>HANDNOVA</strong> — Plataforma de aprendizaje de Lengua de Señas Colombiana &nbsp;·&nbsp; Proyecto Formativo SENA
+  <div class="footer-legal"><a href="../legal/terminos.html">Términos y Condiciones</a> &nbsp;·&nbsp; <a href="../legal/privacidad.html">Tratamiento de Datos</a></div>
+</footer>
+
+<script>
+  const CATEGORIAS_NUEVAS = {
+  "numeros": {
+    "nombre": "Números",
+    "emoji": "🔢",
+    "descripcion": "Cuenta y números básicos en Lengua de Señas Colombiana.",
+    "palabras": [
+      {
+        "label": "Cero",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Uno",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Dos",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Tres",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cuatro",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cinco",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Seis",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Siete",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Ocho",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Nueve",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Diez",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Veinte",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Treinta",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cincuenta",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cien",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Mil",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "ropa": {
+    "nombre": "Ropa",
+    "emoji": "👕",
+    "descripcion": "Prendas de vestir y accesorios de uso diario.",
+    "palabras": [
+      {
+        "label": "Camisa",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Camiseta",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Pantalón",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Falda",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Vestido",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Chaqueta",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Zapatos",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Sombrero",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Gorra",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Guantes",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Bufanda",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Medias",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "hogar": {
+    "nombre": "Hogar",
+    "emoji": "🏠",
+    "descripcion": "Espacios y objetos de la casa.",
+    "palabras": [
+      {
+        "label": "Casa",
+        "real": true,
+        "video": "casa"
+      },
+      {
+        "label": "Cocina",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Sala",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Baño",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Puerta",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Ventana",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Mesa",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Silla",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cama",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Nevera",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Televisor",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Ducha",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "transporte": {
+    "nombre": "Transporte",
+    "emoji": "🚌",
+    "descripcion": "Medios de transporte y vocabulario vial.",
+    "palabras": [
+      {
+        "label": "Carro",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Bus",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Taxi",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Moto",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Bicicleta",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Tren",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Metro",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Avión",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Barco",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Semáforo",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Calle",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Aeropuerto",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "fechas": {
+    "nombre": "Fechas y tiempo",
+    "emoji": "📅",
+    "descripcion": "Días, meses y palabras para hablar del tiempo.",
+    "palabras": [
+      {
+        "label": "Lunes",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Martes",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Miércoles",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Jueves",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Viernes",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Sábado",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Domingo",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Hoy",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Mañana",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Ayer",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Semana",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Mes",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Año",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cumpleaños",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "deportes": {
+    "nombre": "Deportes",
+    "emoji": "⚽",
+    "descripcion": "Disciplinas deportivas y vocabulario de juego.",
+    "palabras": [
+      {
+        "label": "Fútbol",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Baloncesto",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Voleibol",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Natación",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Ciclismo",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Béisbol",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Boxeo",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Correr",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Nadar",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Ganar",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Perder",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Jugador",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "salud": {
+    "nombre": "Salud",
+    "emoji": "🏥",
+    "descripcion": "Vocabulario médico y de bienestar.",
+    "palabras": [
+      {
+        "label": "Médico",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Enfermera",
+        "real": true,
+        "video": "enfermera"
+      },
+      {
+        "label": "Hospital",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Farmacia",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Medicina",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Fiebre",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Dolor",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Gripe",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Vacuna",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cita médica",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Psicólogo",
+        "real": true,
+        "video": "psicologo"
+      },
+      {
+        "label": "Discapacidad",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "naturaleza": {
+    "nombre": "Naturaleza y clima",
+    "emoji": "🌿",
+    "descripcion": "El mundo natural, el clima y el paisaje.",
+    "palabras": [
+      {
+        "label": "Sol",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Luna",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Estrella",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cielo",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Lluvia",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Viento",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Nieve",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Calor",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Frío",
+        "real": true,
+        "video": "frio"
+      },
+      {
+        "label": "Montaña",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Río",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Mar",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Árbol",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Flor",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "lugares": {
+    "nombre": "Lugares y ciudad",
+    "emoji": "🏙️",
+    "descripcion": "Sitios y espacios comunes de la ciudad.",
+    "palabras": [
+      {
+        "label": "Ciudad",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Barrio",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Parque",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Iglesia",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Banco",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Supermercado",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Restaurante",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Hospital",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Hotel",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Aeropuerto",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Zoológico",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cine",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "tecnologia": {
+    "nombre": "Tecnología",
+    "emoji": "💻",
+    "descripcion": "Dispositivos y vocabulario digital.",
+    "palabras": [
+      {
+        "label": "Computador",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Celular",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Internet",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Teclado",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Pantalla",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Mouse",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Tableta",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Cámara",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Contraseña",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Video",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Mensaje",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Wifi",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "verbos": {
+    "nombre": "Verbos comunes",
+    "emoji": "🏃",
+    "descripcion": "Acciones y verbos de uso frecuente.",
+    "palabras": [
+      {
+        "label": "Comer",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Beber",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Dormir",
+        "real": true,
+        "video": "dormir"
+      },
+      {
+        "label": "Caminar",
+        "real": true,
+        "video": "caminar"
+      },
+      {
+        "label": "Correr",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Hablar",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Escuchar",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Escribir",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Leer",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Estudiar",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Trabajar",
+        "real": true,
+        "video": "trabajar"
+      },
+      {
+        "label": "Jugar",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Comprar",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Ayudar",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Aprender",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Amar",
+        "real": false,
+        "video": null
+      }
+    ]
+  },
+  "adjetivos": {
+    "nombre": "Adjetivos comunes",
+    "emoji": "🔤",
+    "descripcion": "Cualidades y características comunes.",
+    "palabras": [
+      {
+        "label": "Grande",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Pequeño",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Alto",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Bajo",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Bonito",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Feo",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Nuevo",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Viejo",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Rápido",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Lento",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Fácil",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Difícil",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Limpio",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Sucio",
+        "real": false,
+        "video": null
+      },
+      {
+        "label": "Caliente",
+        "real": true,
+        "video": "caliente"
+      },
+      {
+        "label": "Frío",
+        "real": true,
+        "video": "frio"
+      }
+    ]
+  }
+};
+
+  (function render() {
+    const params = new URLSearchParams(location.search);
+    const clave = params.get('c');
+    const cat = CATEGORIAS_NUEVAS[clave];
+    const grid = document.getElementById('gridVideos');
+
+    if (!cat) {
+      document.getElementById('catTitulo').textContent = 'Categoría no encontrada';
+      document.getElementById('catDesc').textContent = 'Vuelve a categorías e intenta de nuevo.';
+      return;
+    }
+
+    document.title = cat.nombre + ' — HANDNOVA';
+    document.getElementById('catBadge').textContent = 'Categoría · ' + cat.nombre;
+    document.getElementById('catTitulo').textContent = cat.nombre;
+    document.getElementById('catDesc').textContent = cat.descripcion;
+
+    grid.innerHTML = cat.palabras.map(p => {
+      if (p.real && p.video) {
+        return `
+          <div class="video-card fade-up">
+            <div class="video-wrapper">
+              <video controls preload="metadata">
+                <source src="../assets/videos/${p.video}.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-label">${p.label}</div>
+          </div>`;
+      }
+      return `
+        <div class="video-card proximamente fade-up">
+          <div class="video-placeholder-box">
+            <div class="ph-spinner"></div>
+            <span class="ph-texto">Próximamente</span>
+            <span class="ph-sub">Video en preparación</span>
+          </div>
+          <div class="video-label">${p.label}</div>
+        </div>`;
+    }).join('');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  })();
+</script>
+<script>
+  (function() {
+    var sesion = JSON.parse(localStorage.getItem('HANDNOVA_sesion') || 'null');
+    var label  = document.getElementById('nav-cuenta-label');
+    if (sesion && label) label.textContent = sesion.nombre.split(' ')[0];
+  })();
+</script>
+<script type="module" src="../assets/js/cloud-sync.js"></script>
+<script src="../assets/js/gamification.js"></script>
+<script src="../assets/js/chatbot.js"></script>
+<script src="../assets/js/video-controls.js"></script>
+<script src="../assets/js/mobile-nav.js"></script>
+</body>
+</html>
