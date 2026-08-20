@@ -216,7 +216,10 @@
   }
 
   async function cargarSenas() {
-    SENAS = await fetch('../assets/senas_disponibles.json').then(r => r.json());
+    const todas = await fetch('../assets/senas_disponibles.json').then(r => r.json());
+    // Solo palabras con video real: si se incluyen las marcadas "Próximamente"
+    // (disponible:false), el video sale roto durante la ronda.
+    SENAS = Object.fromEntries(Object.entries(todas).filter(([, v]) => v.disponible !== false));
     claves = Object.keys(SENAS);
     document.getElementById('mejorPuntajeInicio').textContent = localStorage.getItem('contrarreloj_best') || 0;
   }

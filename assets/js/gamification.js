@@ -37,6 +37,16 @@
 
   const XP_POR_NIVEL = 150;
 
+  /* ---- Seguridad: escapar HTML antes de insertarlo con innerHTML -------
+     Cualquier texto que termine en un innerHTML (historial, nombres de
+     categoría, términos de búsqueda) debe pasar por aquí primero, sin
+     importar de dónde venga el dato. */
+  function escaparHTML(texto) {
+    const div = document.createElement('div');
+    div.textContent = String(texto == null ? '' : texto);
+    return div.innerHTML;
+  }
+
   /* ---- Lectura de estado ------------------------------------------------ */
   function num(key) { return parseInt(localStorage.getItem(key) || '0', 10) || 0; }
   function arr(key) { try { return JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { return []; } }
@@ -156,9 +166,14 @@
       const clave = archivo === 'categoria.html'
         ? new URLSearchParams(location.search).get('c')
         : archivo.replace('.html', '');
-      if (clave) {
+      // Seguridad: solo se acepta una clave que esté en nuestra lista blanca
+      // de categorías conocidas. Si viene de la URL (?c=...) y no es una
+      // categoría real, se ignora en vez de usarse "tal cual" (evita que un
+      // enlace manipulado inyecte texto/HTML arbitrario en el historial).
+      const nombre = clave ? NOMBRES_CATEGORIA[clave] : null;
+      if (clave && nombre) {
         registrarVisitaCategoria(clave);
-        registrarHistorial('📖', `Visitaste la categoría ${NOMBRES_CATEGORIA[clave] || clave}`, '');
+        registrarHistorial('📖', `Visitaste la categoría ${nombre}`, '');
       }
     }
   }
@@ -266,9 +281,9 @@
     }
     lista.innerHTML = historial.map(item => `
       <div class="actividad-item">
-        <span class="actividad-icon">${item.icon || '⭐'}</span>
-        <span class="actividad-texto">${item.texto}</span>
-        <span class="actividad-tiempo">${etiquetaFecha(item.fechaISO)}</span>
+        <span class="actividad-icon">${escaparHTML(item.icon || '⭐')}</span>
+        <span class="actividad-texto">${escaparHTML(item.texto)}</span>
+        <span class="actividad-tiempo">${escaparHTML(etiquetaFecha(item.fechaISO))}</span>
       </div>`).join('');
   }
 
@@ -367,6 +382,7 @@
   /* ---- API pública ---------------------------------------------------- */
   window.HANDNOVA = {
     LOGROS,
+    escaparHTML,
     obtenerStats,
     calcularXP,
     obtenerNivel,

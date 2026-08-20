@@ -42,7 +42,10 @@ else:
 
     print(f"Total de frames: {contador_frames}")
     print(f"Frames donde se detectó al menos una mano: {frames_con_mano}")
-    print(f"Porcentaje de cobertura: {frames_con_mano / contador_frames * 100:.1f}%")
+    if contador_frames > 0:
+        print(f"Porcentaje de cobertura: {frames_con_mano / contador_frames * 100:.1f}%")
+    else:
+        print("Porcentaje de cobertura: N/A (el video no tiene frames legibles)")
     print(f"Frames SIN mano detectada: {frames_sin_mano}")
 
 cap.release()

@@ -333,6 +333,11 @@
     <div class="footer-legal"><a href="../legal/terminos.html">Términos y Condiciones</a> &nbsp;·&nbsp; <a href="../legal/privacidad.html">Tratamiento de Datos</a></div>
   </footer>
 
+  <!-- gamification.js va ANTES del script de esta página: loadProgress() usa
+       window.HANDNOVA y se ejecuta de inmediato, así que necesita que ya
+       esté cargado (si no, racha/nivel/logros/progreso por dificultad
+       quedan vacíos en la primera carga). -->
+  <script src="../assets/js/gamification.js"></script>
   <script>
     function loadProgress() {
       const mejor    = parseInt(localStorage.getItem('quiz_best')    || 0);
@@ -421,11 +426,14 @@
     }
 
     loadProgress();
+
+    // Cuando cloud-sync.js termina de fusionar los datos de Firestore
+    // (o confirma que no hay sesión), volvemos a pintar con los datos al día.
+    document.addEventListener('HANDNOVA:cloud-listo', loadProgress);
   </script>
 
 <script type="module" src="../assets/js/cloud-sync.js"></script>
 
-<script src="../assets/js/gamification.js"></script>
 <script src="../assets/js/chatbot.js"></script>
 <script src="../assets/js/video-controls.js"></script>
 <script src="../assets/js/mobile-nav.js"></script>

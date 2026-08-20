@@ -123,6 +123,10 @@ function aplicarStatsAlLocal(datosCloud) {
 }
 
 let uidActual = null;
+// Se incrementa en cada evento de auth. Sirve para descartar el resultado
+// de una operación async (login) si para cuando termina ya llegó un evento
+// más reciente (por ejemplo, la persona cerró sesión mientras se cargaba).
+let operacionActual = 0;
 
 async function cargarYFusionar(uid, nombre, correo) {
   const ref = doc(db, 'usuarios', uid);
@@ -155,6 +159,8 @@ window.HANDNOVA_CLOUD = {
 };
 
 onAuthStateChanged(auth, async (user) => {
+  const miOperacion = ++operacionActual;
+
   if (user) {
     // Si el progreso guardado en este navegador pertenece a OTRA cuenta
     // (alguien cerró sesión sin limpiar, o cambió de usuario), lo borramos
@@ -165,10 +171,15 @@ onAuthStateChanged(auth, async (user) => {
     }
     try {
       await cargarYFusionar(user.uid, user.displayName || 'Usuario', user.email);
+      // Si mientras esperábamos Firestore ya llegó un evento más nuevo
+      // (la persona cerró sesión o cambió de cuenta), este resultado quedó
+      // desactualizado: no lo aplicamos para no pisar el estado correcto.
+      if (miOperacion !== operacionActual) return;
       uidActual = user.uid;
       window.HANDNOVA_CLOUD.listo = true;
       window.HANDNOVA_CLOUD.usuario = { uid: user.uid, nombre: user.displayName || 'Usuario', correo: user.email };
     } catch (err) {
+      if (miOperacion !== operacionActual) return;
       // Firestore puede no estar activado todavía en la consola: seguimos
       // en modo local sin romper la página.
       console.warn('HANDNOVA: Firestore no disponible todavía, usando datos locales.', err.message);

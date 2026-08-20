@@ -65,6 +65,18 @@
     "pagina": "colores.html",
     "disponible": true
   },
+  "rosado": {
+    "label": "Rosado",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": true
+  },
+  "naranja": {
+    "label": "Naranja",
+    "categoria": "🎨 Colores",
+    "pagina": "colores.html",
+    "disponible": true
+  },
   "almuerzo": {
     "label": "Almuerzo",
     "categoria": "🍽️ Comida",
@@ -91,6 +103,42 @@
   },
   "hambre": {
     "label": "Hambre",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": true
+  },
+  "sopa": {
+    "label": "Sopa",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": true
+  },
+  "pescado": {
+    "label": "Pescado",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": true
+  },
+  "pollo": {
+    "label": "Pollo",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": true
+  },
+  "carne": {
+    "label": "Carne",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": true
+  },
+  "arroz": {
+    "label": "Arroz",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
+    "disponible": true
+  },
+  "pasta": {
+    "label": "Pasta",
     "categoria": "🍽️ Comida",
     "pagina": "comida.html",
     "disponible": true
@@ -1407,13 +1455,13 @@
     "label": "Fútbol",
     "categoria": "⚽ Deportes",
     "pagina": "categoria.html?c=deportes",
-    "disponible": false
+    "disponible": true
   },
   "baloncesto": {
     "label": "Baloncesto",
     "categoria": "⚽ Deportes",
     "pagina": "categoria.html?c=deportes",
-    "disponible": false
+    "disponible": true
   },
   "voleibol": {
     "label": "Voleibol",
@@ -1437,13 +1485,13 @@
     "label": "Béisbol",
     "categoria": "⚽ Deportes",
     "pagina": "categoria.html?c=deportes",
-    "disponible": false
+    "disponible": true
   },
   "boxeo": {
     "label": "Boxeo",
     "categoria": "⚽ Deportes",
     "pagina": "categoria.html?c=deportes",
-    "disponible": false
+    "disponible": true
   },
   "correr": {
     "label": "Correr",
@@ -1497,7 +1545,7 @@
     "label": "Fiebre",
     "categoria": "🏥 Salud",
     "pagina": "categoria.html?c=salud",
-    "disponible": false
+    "disponible": true
   },
   "dolor": {
     "label": "Dolor",
@@ -1579,8 +1627,8 @@
   },
   "frio": {
     "label": "Frío",
-    "categoria": "🌿 Naturaleza y clima",
-    "pagina": "categoria.html?c=naturaleza",
+    "categoria": "🍽️ Comida",
+    "pagina": "comida.html",
     "disponible": true
   },
   "montana": {
@@ -1894,5 +1942,59 @@
     "categoria": "🔤 Adjetivos comunes",
     "pagina": "categoria.html?c=adjetivos",
     "disponible": false
+  },
+  "tenis": {
+    "label": "Tenis",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": true
+  },
+  "vela": {
+    "label": "Vela (deporte)",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": true
+  },
+  "futbol_americano": {
+    "label": "Fútbol americano",
+    "categoria": "⚽ Deportes",
+    "pagina": "categoria.html?c=deportes",
+    "disponible": true
+  },
+  "asma": {
+    "label": "Asma",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": true
+  },
+  "cancer": {
+    "label": "Cáncer",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": true
+  },
+  "gripa": {
+    "label": "Gripa",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": true
+  },
+  "mareo": {
+    "label": "Mareo",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": true
+  },
+  "pastillas": {
+    "label": "Pastillas",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": true
+  },
+  "cirugia": {
+    "label": "Cirugía",
+    "categoria": "🏥 Salud",
+    "pagina": "categoria.html?c=salud",
+    "disponible": true
   }
 }

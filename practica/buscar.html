@@ -461,10 +461,11 @@
       } else if (parciales.length > 1) {
         mostrarLista(parciales);
       } else {
+        const terminoSeguro = window.HANDNOVA ? HANDNOVA.escaparHTML(terminoOriginal) : terminoOriginal;
         resultado.innerHTML = `
           <div class="no-encontrado">
             <span class="emoji"></span>
-            <p>No encontramos la seña para <strong>"${terminoOriginal}"</strong>.<br>
+            <p>No encontramos la seña para <strong>"${terminoSeguro}"</strong>.<br>
             Intenta con otra palabra o revisa la ortografía.</p>
           </div>`;
       }

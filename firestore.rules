@@ -14,10 +14,29 @@ service cloud.firestore {
   match /databases/{database}/documents {
 
     match /usuarios/{uid} {
-      allow read, write: if request.auth != null && request.auth.uid == uid;
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if request.auth != null
+                   && request.auth.uid == uid
+                   && datosValidos(request.resource.data);
     }
 
     // Cualquier otra colección/documento no contemplado queda bloqueado
     // por defecto (Firestore deniega si no hay una regla que lo permita).
   }
+}
+
+// Validación mínima de forma/rango para el documento de progreso.
+// No sustituye una validación real del lado del servidor (para eso se
+// necesitaría una Cloud Function que recalcule el puntaje a partir de las
+// respuestas), pero al menos evita que alguien escriba porcentajes fuera
+// de 0-100 o valores con el tipo equivocado directamente desde la consola
+// del navegador.
+function datosValidos(d) {
+  return (!('quiz_best' in d)      || (d.quiz_best is int      && d.quiz_best      >= 0 && d.quiz_best      <= 100))
+      && (!('quiz_facil_mejor' in d)   || (d.quiz_facil_mejor is int   && d.quiz_facil_mejor   >= 0 && d.quiz_facil_mejor   <= 100))
+      && (!('quiz_normal_mejor' in d)  || (d.quiz_normal_mejor is int  && d.quiz_normal_mejor  >= 0 && d.quiz_normal_mejor  <= 100))
+      && (!('quiz_dificil_mejor' in d) || (d.quiz_dificil_mejor is int && d.quiz_dificil_mejor >= 0 && d.quiz_dificil_mejor <= 100))
+      && (!('quiz_experto_mejor' in d) || (d.quiz_experto_mejor is int && d.quiz_experto_mejor >= 0 && d.quiz_experto_mejor <= 100))
+      && (!('contrarreloj_combo_max' in d) || (d.contrarreloj_combo_max is int && d.contrarreloj_combo_max >= 0 && d.contrarreloj_combo_max <= 999))
+      && (!('racha_count' in d)  || (d.racha_count is int  && d.racha_count  >= 0 && d.racha_count  <= 3660));
 }

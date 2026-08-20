@@ -471,7 +471,7 @@
         <!-- RECUPERAR -->
         <div class="tab-panel" id="panel-recuperar">
           <h2>Recuperar contraseña</h2>
-          <p class="subtitulo">Ingresa tu correo y te mostraremos tu contraseña.</p>
+          <p class="subtitulo">Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.</p>
           <div class="alert alert-error"   id="rec-error"></div>
           <div class="alert alert-success" id="rec-exito"></div>
           <div class="campo"><input type="email" id="rec-correo" placeholder="Correo electrónico"></div>
@@ -530,6 +530,7 @@
       'icloud.com', 'me.com', 'mac.com',
       'protonmail.com', 'proton.me',
       'gmx.com', 'zoho.com', 'aol.com',
+      'sena.edu.co', 'misena.edu.co',
     ];
 
     function correoEsDeProveedorReal(correo) {
@@ -652,15 +653,35 @@
       }
     }
 
+    function iniciarCooldownBoton(btn, segundos) {
+      btn.disabled = true;
+      let restante = segundos;
+      const textoBase = btn.dataset.textoBase || btn.textContent;
+      btn.dataset.textoBase = textoBase;
+      btn.textContent = `Espera ${restante}s...`;
+      const intervalo = setInterval(() => {
+        restante--;
+        if (restante <= 0) {
+          clearInterval(intervalo);
+          btn.disabled = false;
+          btn.textContent = textoBase;
+        } else {
+          btn.textContent = `Espera ${restante}s...`;
+        }
+      }, 1000);
+    }
+
     async function reenviarVerificacion() {
       const btn = document.getElementById('btn-reenviar-verificacion');
+      if (btn.disabled) return; // ya está en cooldown, ignora clics de más
       try {
         await sendEmailVerification(auth.currentUser);
         btn.textContent = 'Enviado ✓';
-        setTimeout(() => { btn.textContent = 'Reenviar correo'; }, 4000);
+        setTimeout(() => iniciarCooldownBoton(btn, 30), 1200);
       } catch (e) {
-        btn.textContent = 'Espera un momento...';
-        setTimeout(() => { btn.textContent = 'Reenviar correo'; }, 4000);
+        // Firebase suele rechazar por rate-limit si se pide muy seguido:
+        // igual aplicamos cooldown real para no dejar el botón disponible.
+        iniciarCooldownBoton(btn, 30);
       }
     }
 

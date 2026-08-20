@@ -291,6 +291,22 @@
     { file: 'trabajar',  label: 'Trabajar' },
     { file: 'triste',    label: 'Triste' },
     { file: 'vaca',      label: 'Vaca' },
+    // Deportes
+    { file: 'futbol',            label: 'Fútbol' },
+    { file: 'baloncesto',        label: 'Baloncesto' },
+    { file: 'beisbol',           label: 'Béisbol' },
+    { file: 'boxeo',             label: 'Boxeo' },
+    { file: 'tenis',             label: 'Tenis' },
+    { file: 'vela',              label: 'Vela' },
+    { file: 'futbol_americano',  label: 'Fútbol americano' },
+    // Salud
+    { file: 'fiebre',    label: 'Fiebre' },
+    { file: 'gripa',     label: 'Gripa' },
+    { file: 'asma',      label: 'Asma' },
+    { file: 'cancer',    label: 'Cáncer' },
+    { file: 'mareo',     label: 'Mareo' },
+    { file: 'pastillas', label: 'Pastillas' },
+    { file: 'cirugia',   label: 'Cirugía' },
   ];
 
   const RONDAS_TOTAL = 8;
@@ -299,7 +315,7 @@
   const TIEMPO_MIN_MS = 9000;
 
   let ronda = 0, puntaje = 0, vidas = VIDAS_INICIAL, racha = 0, mejorRacha = 0;
-  let palabraActual = null, letrasIngresadas = [], pistasUsadas = 0;
+  let palabraActual = null, letrasIngresadas = [], pistasUsadas = 0, totalLlenas = 0;
   let tiempoRestante = 0, temporizador = null, respondida = false;
   let palabrasUsadas = [];
 
@@ -357,6 +373,7 @@
     palabraActual = disponibles[Math.floor(Math.random() * disponibles.length)] || BANCO[Math.floor(Math.random() * BANCO.length)];
     palabrasUsadas.push(palabraActual.file);
     letrasIngresadas = [];
+    totalLlenas = 0;
 
     dlVideo.src = `../assets/videos/${palabraActual.file}.mp4`;
 
@@ -410,59 +427,91 @@
 
   function objetivoActual() { return quitarAcentos(palabraActual.label); }
 
+  // Devuelve todas las posiciones (índices) donde aparece "letra" en la palabra objetivo
+  function posicionesDeLetra(letra) {
+    const objetivo = objetivoActual();
+    const posiciones = [];
+    for (let i = 0; i < objetivo.length; i++) {
+      if (objetivo[i] === letra) posiciones.push(i);
+    }
+    return posiciones;
+  }
+
+  // Llena en las casillas todas las posiciones indicadas con la letra dada
+  function llenarPosiciones(letra, posiciones) {
+    posiciones.forEach(i => {
+      const casilla = document.getElementById(`casilla-${i}`);
+      if (casilla) {
+        casilla.textContent = letra;
+        casilla.classList.add('llena');
+      }
+    });
+    const boton = document.getElementById(`tecla-${letra}`);
+    if (boton) boton.disabled = true;
+    letrasIngresadas.push({ letra, posiciones });
+    totalLlenas += posiciones.length;
+  }
+
   function elegirLetra(letra) {
     if (respondida) return;
-    const objetivo = objetivoActual();
-    const posicion = letrasIngresadas.length;
     const boton = document.getElementById(`tecla-${letra}`);
-    const casilla = document.getElementById(`casilla-${posicion}`);
+    if (boton && boton.disabled) return;
 
-    if (letra === objetivo[posicion]) {
-      letrasIngresadas.push(letra);
-      casilla.textContent = letra;
-      casilla.classList.add('llena');
-      if (boton) boton.disabled = true;
+    const posiciones = posicionesDeLetra(letra);
 
-      if (letrasIngresadas.length === objetivo.length) {
+    if (posiciones.length > 0) {
+      // La letra aparece una o varias veces: se colocan TODAS automáticamente
+      llenarPosiciones(letra, posiciones);
+      if (totalLlenas === objetivoActual().length) {
         completarRonda();
       }
     } else {
       if (vidas <= 0) return;
-      casilla.classList.add('shake');
-      setTimeout(() => casilla.classList.remove('shake'), 350);
+      document.querySelectorAll('.dl-casilla').forEach(c => {
+        c.classList.add('shake');
+        setTimeout(() => c.classList.remove('shake'), 350);
+      });
       perderVida();
     }
   }
 
   function borrarUltimaLetra() {
     if (respondida || letrasIngresadas.length === 0) return;
-    const letra = letrasIngresadas.pop();
-    const casilla = document.getElementById(`casilla-${letrasIngresadas.length}`);
-    casilla.textContent = '';
-    casilla.classList.remove('llena');
-    const boton = document.getElementById(`tecla-${letra}`);
+    const ultimo = letrasIngresadas.pop();
+    ultimo.posiciones.forEach(i => {
+      const casilla = document.getElementById(`casilla-${i}`);
+      if (casilla) {
+        casilla.textContent = '';
+        casilla.classList.remove('llena');
+      }
+    });
+    totalLlenas -= ultimo.posiciones.length;
+    const boton = document.getElementById(`tecla-${ultimo.letra}`);
     if (boton) boton.disabled = false;
   }
 
   function usarPista() {
     if (respondida) return;
     const objetivo = objetivoActual();
-    if (letrasIngresadas.length >= objetivo.length) return;
+    if (totalLlenas >= objetivo.length) return;
+
+    let indicePendiente = -1;
+    for (let i = 0; i < objetivo.length; i++) {
+      const casilla = document.getElementById(`casilla-${i}`);
+      if (casilla && !casilla.classList.contains('llena')) { indicePendiente = i; break; }
+    }
+    if (indicePendiente === -1) return;
+
     pistasUsadas++;
     puntaje = Math.max(0, puntaje - 15);
     statPuntaje.textContent = puntaje;
-    elegirLetraForzada(objetivo[letrasIngresadas.length]);
+    elegirLetraForzada(objetivo[indicePendiente]);
   }
 
   function elegirLetraForzada(letra) {
-    const posicion = letrasIngresadas.length;
-    letrasIngresadas.push(letra);
-    const casilla = document.getElementById(`casilla-${posicion}`);
-    casilla.textContent = letra;
-    casilla.classList.add('llena');
-    const boton = document.getElementById(`tecla-${letra}`);
-    if (boton) boton.disabled = true;
-    if (letrasIngresadas.length === objetivoActual().length) completarRonda();
+    const posiciones = posicionesDeLetra(letra);
+    llenarPosiciones(letra, posiciones);
+    if (totalLlenas === objetivoActual().length) completarRonda();
   }
 
   function perderVida() {
