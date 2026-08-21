@@ -673,6 +673,18 @@ footer strong {
   color: white;
 }
 
+.footer-contacto {
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.45);
+}
+.footer-contacto a {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-contacto a:hover { color: white; }
+
 /* ---- ANIMACION al hacer scroll ---- */
 /* cuando el elemento entra en pantalla, JavaScript le agrega la clase visible */
 
