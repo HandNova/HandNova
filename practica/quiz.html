@@ -29,7 +29,13 @@
 .dif-card {
   width: 150px; padding: 22px 14px; border-radius: 18px; border: 2px solid #e0d6ff; background: white;
   cursor: pointer; transition: all 0.2s; color: var(--negro);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  border-top: 4px solid #e0d6ff;
 }
+.dif-card[data-nivel="facil"]   { border-top-color: #22c55e; }
+.dif-card[data-nivel="normal"]  { border-top-color: #3b82f6; }
+.dif-card[data-nivel="dificil"] { border-top-color: #f59e0b; }
+.dif-card[data-nivel="experto"] { border-top-color: #ef4444; }
 .dif-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.1); }
 .dif-card[data-nivel="facil"]:hover   { border-color: #22c55e; }
 .dif-card[data-nivel="normal"]:hover  { border-color: #3b82f6; }
@@ -83,6 +89,8 @@
 .option:hover { background: #ede9ff; border-color: var(--morado); }
 .option.correct { background: #22c55e; color: white; border-color: #22c55e; }
 .option.wrong { background: #ef4444; color: white; border-color: #ef4444; }
+body.modo-oscuro .option.correct { background: #22c55e; color: white; border-color: #22c55e; }
+body.modo-oscuro .option.wrong { background: #ef4444; color: white; border-color: #ef4444; }
 .video-option { width: 100%; height: 140px; object-fit: cover; border-radius: 10px; pointer-events: none; }
 @media (max-width: 480px) { .options { grid-template-columns: 1fr; } }
 
