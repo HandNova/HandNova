@@ -89,6 +89,8 @@
 .option:hover { background: #ede9ff; border-color: var(--morado); }
 .option.correct { background: #22c55e; color: white; border-color: #22c55e; }
 .option.wrong { background: #ef4444; color: white; border-color: #ef4444; }
+.option.tiempo-agotado { background: #f59e0b; color: white; border-color: #f59e0b; }
+body.modo-oscuro .option.tiempo-agotado { background: #f59e0b; color: white; border-color: #f59e0b; }
 body.modo-oscuro .option.correct { background: #22c55e; color: white; border-color: #22c55e; }
 body.modo-oscuro .option.wrong { background: #ef4444; color: white; border-color: #ef4444; }
 .video-option { width: 100%; height: 140px; object-fit: cover; border-radius: 10px; pointer-events: none; }
@@ -407,7 +409,7 @@ function tiempoAgotado() {
   const q = quizData[current];
   const options = document.querySelectorAll('.option');
   options.forEach(o => o.style.pointerEvents = 'none');
-  if (options[q.correct]) options[q.correct].classList.add('correct');
+  if (options[q.correct]) options[q.correct].classList.add('tiempo-agotado');
   document.getElementById('nextBtn').classList.add('visible');
 }
 
