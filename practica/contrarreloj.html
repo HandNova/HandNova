@@ -79,6 +79,7 @@
   .cr-opcion:disabled { cursor: not-allowed; }
   .cr-opcion.correcta { background: rgba(16,185,129,0.15); border-color: #10b981; color: #059669; }
   .cr-opcion.incorrecta { background: rgba(239,68,68,0.15); border-color: #ef4444; color: #dc2626; }
+  .cr-opcion.tiempo-agotado { background: rgba(245,158,11,0.15); border-color: #f59e0b; color: #b45309; }
 
   .cr-combo {
     display: inline-flex; align-items: center; gap: 6px;
@@ -96,6 +97,14 @@
     background-clip: text; margin: 10px 0;
   }
   .cr-final p.record { color: #059669; font-weight: 700; margin-bottom: 18px; }
+
+body.modo-oscuro .cr-tarjeta { background: #1a1d27; }
+body.modo-oscuro .cr-stat { background: #1a1d27; }
+body.modo-oscuro .cr-opcion { background: #1a1d27; border-color: #2d3142; color: var(--negro); }
+body.modo-oscuro .cr-opcion:hover { background: #232733; }
+body.modo-oscuro .cr-opcion.correcta { background: rgba(16,185,129,0.25); border-color: #10b981; color: #34d399; }
+body.modo-oscuro .cr-opcion.incorrecta { background: rgba(239,68,68,0.25); border-color: #ef4444; color: #f87171; }
+body.modo-oscuro .cr-opcion.tiempo-agotado { background: rgba(245,158,11,0.25); border-color: #f59e0b; color: #fbbf24; }
 
   .blob1 { top: -60px; left: -60px; width: 260px; height: 260px; background: var(--magenta); }
   .blob2 { bottom: -80px; right: -60px; width: 300px; height: 300px; background: var(--cyan); }
@@ -308,12 +317,13 @@
         crCombo.textContent = `🔥 Combo x${multiplicador}`;
         crCombo.classList.add('visible');
       }
-    } else {
+     } else {
       combo = 0;
-      // Mostramos cuál era la correcta
+      // Mostramos cuál era la correcta (ámbar si fue por tiempo, verde si eligió mal)
       const labelCorrecta = SENAS[claveCorrectaActual]?.label;
+      const claseCorrecta = btnPresionado ? 'correcta' : 'tiempo-agotado';
       document.querySelectorAll('.cr-opcion').forEach(b => {
-        if (b.textContent === labelCorrecta) b.classList.add('correcta');
+        if (b.textContent === labelCorrecta) b.classList.add(claseCorrecta);
       });
     }
 
